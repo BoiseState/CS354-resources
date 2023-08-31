@@ -1,6 +1,3 @@
-import java.sql.Array;
-import java.util.Arrays;
-
 public class Echo {
 
     public static void echo(Object x) {
