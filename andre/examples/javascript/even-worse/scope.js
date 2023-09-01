@@ -1,4 +1,13 @@
-/*var scope = function() {// javascript has blocks, but not block scope see examples/scope/scope.java
+/*JS has awful scoping, at least until ES6 (although the old behavior is supported)
+
+    var   - declare variables as global or function scope, but not block scope. Hoisting* behaviour
+    const - declare variables with block scope that can never be reassigned
+    let   - declare variables with block scope that can be reassigned
+
+    * - see ../not-good/function-statement.js
+*/
+
+var scope = function() {// javascript has blocks, but not block scope see examples/scope/scope.java
 
 var a = 12;
 
@@ -15,9 +24,9 @@ console.log(c);
 
 //in Javascript, its often best to declare them all at the top of a function
 
-}();*/
+}();
 
-//In ES6, javascript added let and const, adding block scope
+//In ES6, javascript added let, adding block scope
 var letscope = function() {
 
     let d = 12;
