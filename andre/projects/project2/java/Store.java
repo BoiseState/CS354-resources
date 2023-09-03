@@ -46,8 +46,8 @@ public class Store {
      *     "ottwiz"   2
      *
      *     The string produced will be:
-     *     "bhietsch: 1
-     *     ottwiz: 2
+     *     "bhietsch:1
+     *     ottwiz:2
      *     "
      */
     public String toString() {
@@ -56,7 +56,7 @@ public class Store {
 
         for (String key : keys) {
             Integer value = map.get(key);
-            sb.append(key).append(": ").append(value).append("\n");
+            sb.append(key).append(":").append(value).append("\n");
         }
         return sb.toString();
     }
