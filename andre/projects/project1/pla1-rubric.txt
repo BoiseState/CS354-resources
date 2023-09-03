@@ -1,0 +1,45 @@
+Name:
+
+Grade: /80
+
+Rubric for Scheme project:
+
+Overall Comments:
+
+
+-Submission
+	
+	- a '.scm' file containing the implementation of super-duper
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md: [10 points]
+
+	-Appropriate and explanitory inline comments: [5 points]
+
+
+Code design and style: 
+	- (super-duper) is implemented with a 'pure' subset of scheme (no loops, etc.). [5 points]
+
+    - A testing suite is provided in the submission, with more test cases than where provided. [10 points]
+
+	-Other comments: 
+
+
+Functionality:
+	-Program executes without errors or warnings: [5 points]
+
+	-Passes test cases in the assignment: 
+
+		-Results match on cases 1 - 5: [5 points]
+
+		-Results match on cases 6 - 8: [10 points]
+
+		-Results match on case 9:      [10 points] 
+
+    -Submission includes additional test cases and they pass. [10 pts]
+
+	-Submission creates a copy of the input list, and doesn't modify the original. [10 pts]
+	
+    -Other comments:
