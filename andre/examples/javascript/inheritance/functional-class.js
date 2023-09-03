@@ -24,7 +24,7 @@ var instance2 = myClass(3, 4);
 instance1.printAdd();
 instance2.printAdd();
 
-//can access, but doesn't modify
+//can actually create a new member with the same name, but doesn't modify
 instance1.a = 4;
 
 instance1.printAdd();

@@ -1,3 +1,3 @@
-const obj = require('./module.js');
+const obj = require('./module.js')(); //execute the function! 
 
 console.log(obj.add());

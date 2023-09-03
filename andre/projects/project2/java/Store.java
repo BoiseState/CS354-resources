@@ -26,7 +26,7 @@ public class Store {
      *     "ottwiz"   2
      *
      */
-    public void addToMap(String key) {
+    public void addToStore(String key) {
 
         if (map.containsKey(key)) {
             Integer num = map.get(key);
