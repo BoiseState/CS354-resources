@@ -3,6 +3,7 @@ import java.io.File;
 public class Parser {
 
     private Store store;
+    private int numberOfFeaturesChecked;
 
     /**
      *
@@ -12,6 +13,7 @@ public class Parser {
     public Parser(String filename, Store store) {
         File file = new File(filename);
         this.store = store;
+        this.numberOfFeaturesChecked = 0;
     }
 
     /**
@@ -72,5 +74,13 @@ public class Parser {
         /*
             TODO:
          */
+    }
+
+    /**
+     * Returns an internal count of the number of features checked during parse()
+     */
+    @Override
+    public String toString() {
+        return "Feature Count: " + numberOfFeaturesChecked;
     }
 }
