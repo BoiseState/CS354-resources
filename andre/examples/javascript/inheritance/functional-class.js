@@ -11,6 +11,7 @@ var myClass = (function (a , b) {
     }
 
     //return public members
+    //this is using the object literal '{}' to create a new object, but Object.create or using 'new' works too
     return {
         printAdd: printAdd
     };
@@ -31,3 +32,7 @@ instance1.printAdd();
 
 //this actually creates a new attribute on instance1
 console.log(instance1.a);
+
+/*
+inheritance demo with the vehicle example
+*/
