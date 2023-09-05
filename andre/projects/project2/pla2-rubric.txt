@@ -22,7 +22,7 @@ Documentation:
 
 
 Code design and style: 
-	- Each java class was ported to a javascript object written using one of the paradims discussed in class. [15 points]
+	- Each java class was ported to a Javascript module written using one of the paradigms discussed in class. [15 points]
 
     - parse() is implemented recursively (can use more than one function) [10 points]
 
