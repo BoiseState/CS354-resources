@@ -32,7 +32,3 @@ instance1.printAdd();
 
 //this actually creates a new attribute on instance1
 console.log(instance1.a);
-
-/*
-inheritance demo with the vehicle example
-*/
