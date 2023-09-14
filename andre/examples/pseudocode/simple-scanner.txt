@@ -1,0 +1,34 @@
+curr_char = read()
+
+if curr_char in ['(', ')', '+', '-', '*']
+	return the corresponding token
+if curr_char = ':'
+	next_char = read()
+	if next_char = '='
+		return assign
+	else
+		Error
+if curr_char = '/'
+	next_char = peek() //don't read the next char!
+	if next_char = '*'
+		while loop to read chars until '*/'
+	else
+		return div
+if curr_char = '.'
+	next_char = read()
+	if next_char is a digit
+		read any additional digits
+		return number
+	else 
+		Error
+if curr_char = digit
+	read any additional digits and at most 1 '.'
+	return number
+if curr_char = letter
+	read any additional letters and digits
+	if read or write
+		return read or write
+	else 
+		return id
+else 
+	Error

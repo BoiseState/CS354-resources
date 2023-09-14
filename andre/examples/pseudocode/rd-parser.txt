@@ -1,0 +1,64 @@
+procedure match (expected)
+    if input_token = expected then consume_input_token()
+    else Error!
+
+procedure program()
+    case input_token of
+        id, read, write, $$
+        stmt_list()
+        match($$)
+    else Error!
+
+procedure stmt_list()
+    case input_token of 
+        id, read, write: stmt(); stmt_list()
+        $$: skip()
+    else Error!
+
+procedure stmt()
+    case input_token of
+        id: match(id); match(:=); expr()
+        read: match(read); match(id)
+        write: match(write); expr()
+    else Error!
+
+procedure expr()
+    case input_token of 
+        id, number, (: term(); term_tail()
+    else Error!
+
+procedure term_tail()
+    case input_token of
+        +, -: add_op(); term(); term_tail()
+        ), id, read write, $$: skip()
+    else Error!
+
+procedure term() 
+    case input_token of
+        id, number, (: factor(); factor_tail()
+    else Error!
+
+procedure factor_tail()
+    case input_token of
+        *, /: mult_op(); factor(); factor_tail()
+        +, -, ), id, read, write, $$: skip()
+    else Error!
+
+procedure factor()
+    case input_token of
+        id: match(id)
+        number: match(number)
+        (: match((); expr(); match())
+    else Error!
+
+procedure add_op()
+    case input_token of
+        +: match(+)
+        -: match(-)
+    else Error!
+
+procedure mult_op() 
+    case input_token of
+        *: match(*)
+        /: match(/)
+    else Error!
