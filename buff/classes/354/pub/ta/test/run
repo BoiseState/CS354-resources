@@ -13,17 +13,18 @@ Quote() {
 }
 
 Prgs() {
-    for f ; do
-	echo -n "\"$(Quote <$f)\" "
+    local p
+    for p ; do
+	echo -n "\"$(Quote <$p)\" "
     done
 }
 
 Compare() {
     case $2 in
-	i) trans=Interpreter ;;
-	c) trans=Compiler ;;
+	i) trans="Interpreter:" ;;
+	c) trans="Compiler:   " ;;
     esac
-    diff -w $1/exp $1/out.$2 2>/dev/null >&2 || echo "$trans ${1##*/} failed" >&2
+    diff -q -w $1/exp $1/out.$2 2>/dev/null || echo "$trans ${1##*/} failed" >&2
 }
 
 for t in test-* ; do
