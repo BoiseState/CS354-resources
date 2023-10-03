@@ -62,7 +62,7 @@ class InterpreterTest {
 
         Integer[] exps = {
                 3,
-                3
+                6
         };
 
         String code = "";
