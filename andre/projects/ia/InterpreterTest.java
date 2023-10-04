@@ -14,7 +14,7 @@ class InterpreterTest {
     private Parser parser;
     private Environment env;
 
-    private final String testFilename = "test";
+    private final String testFilename = "compiledProgram";
 
     @BeforeEach
     void setUp() {
@@ -31,7 +31,7 @@ class InterpreterTest {
         File sourceFile = new File(testFilename + ".c");
 
         prg.delete();
-        sourceFile.delete();
+        //sourceFile.delete(); //keep source file for debugging!
     }
 
     @Test
