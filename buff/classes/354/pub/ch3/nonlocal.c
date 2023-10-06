@@ -1,4 +1,4 @@
-// gcc -Wall -o nonlocal nonlocal.c && ./nonlocal
+// gcc -Wall -g -o nonlocal nonlocal.c && ./nonlocal
 
 // NATO: alfa bravo charlie delta echo
 
