@@ -36,8 +36,13 @@ Functionality:
 
 		- Scanner is updated for the new keywords [7.5 points]
 
-        - Parser correctly works with new expressions:  [7.5 points]
+        	- Parser correctly works with new expressions:  [7.5 points]
 
-        - Interpretation and compilation works well for the new constructs:  [10 points] 
+        	- Interpretation and compilation works well for the new constructs:  [10 points] 
 	
     -Other comments:
+
+
+Extra Credit: add compilation to another programming language and include tests that demonstrate this [10 pts] 
+
+
