@@ -1,0 +1,26 @@
+Name:
+
+Grade: /80
+
+Rubric for LaTeX Proposal:
+
+Overall Comments:
+
+
+-Submission
+
+    - A .tex file containing 
+    - Any relevant material used, such as images, templates etc.
+
+
+Documentation:
+	- Website Layout Proposal: [20 points]
+
+	- Programming Project Proposal:
+		- Evaluation Plan		[10 points]
+		- Project Management Materials 	[10 points]
+
+	- Presentation Proposal [20 points]
+
+
+Lack of participation can carry an up to 100% penalty on the project!
