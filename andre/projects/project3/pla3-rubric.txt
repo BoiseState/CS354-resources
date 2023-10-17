@@ -22,5 +22,5 @@ Documentation:
 
 	- Presentation Proposal [20 points]
 
-
-Lack of participation can carry an up to 100% penalty on the project!
+	-Lack of contribution from a team member can result in a penalty of up to a 100% in
+	 this project. This will be handled separately between the instructor and the team.
