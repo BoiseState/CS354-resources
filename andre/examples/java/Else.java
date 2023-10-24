@@ -7,10 +7,8 @@ public class Else
         System.out.print("Enter num: ");
         int n=sc.nextInt();
         if(n>0)
-        {
             if(n>100)
                 System.out.println("more than 100.");
-        }
         else
             System.out.println("The given number is negative.");
     }
