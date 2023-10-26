@@ -1,3 +1,10 @@
+  // gcc -o struct-union struct-union.c && ./struct-union
+
+
+#include <stdio.h>
+
+int main() {
+  
   struct {
     char c;
     int i;
