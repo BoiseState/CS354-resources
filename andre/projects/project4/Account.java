@@ -7,19 +7,19 @@ public abstract class Account {
     public abstract void accrue(double rate);
 
     public double balance() {
-	return balance;
+	    return balance;
     }
 
     public void deposit(double amount) {
-	balance+=amount;
+	    balance += amount;
     }
 
     public void withdraw(double amount) {
-	balance-=amount;
+	    balance -= amount;
     }
 
     public String toString() {
-	return number+":"+customer+":"+balance;
+	    return number + ": " + customer + ": "+ balance;
     }
 
 }
