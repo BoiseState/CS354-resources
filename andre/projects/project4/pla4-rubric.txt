@@ -1,0 +1,43 @@
+Name:
+
+Grade: /80
+
+Rubric for Javascript project:
+
+Overall Comments:
+
+
+-Submission
+	
+	- store.js
+    - parser.js
+    - driver.js
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md: [10 points]
+
+	-Appropriate and explanitory comments: [5 points]
+
+
+Code design and style: 
+	- Each java class was ported to a Javascript module written using one of the paradigms discussed in class. [15 points]
+
+    - parse() is implemented recursively (can use more than one function) [10 points]
+
+	-Other comments: 
+
+
+Functionality:
+	-Program executes without errors or warnings: [10 points]
+
+	-Matches test cases in the assignment: 
+
+		-Results match on map_prairie.json, map_road.json:              [10 points]
+
+		-Results match on map_boisenationalforest.json:                 [10 points]
+
+		-Results match on map_boise_close.json and map_boise_far.json:  [10 points] 
+	
+    -Other comments:
