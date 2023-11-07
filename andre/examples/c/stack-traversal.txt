@@ -1,0 +1,47 @@
+main() stack pointer: 0x10019fd14
+main() frame pointer: 0x1001ac000
+main(): &ptr1:		0x16fc63588 param1:	0x1
+IN A()
+a() stack pointer: 0x16fc63560
+a() frame pointer: 0x10019fd14
+a(): &param1:	0x16fc6355c	param1:	2
+a(): &param2:	0x16fc63550	param2:	0xdeadbeefdeadbeef
+a(): &local: 	0x16fc63548	local:	0xba5eba11ba5eba11
+main() local var address - a() local var address 64 bytes
+data at location 0x16fc63548 is: 0xba5eba11ba5eba11
+data at location 0x16fc63550 is: 0xdeadbeefdeadbeef
+data at location 0x16fc63558 is: 0x26fc63570
+data at location 0x16fc63560 is: 0x16fc635a0
+data at location 0x16fc63568 is: 0x10019fd9c
+data at location 0x16fc63570 is: 0x16fc63588
+data at location 0x16fc63578 is: 0x1
+data at location 0x16fc63580 is: 0x16fc636c0
+IN B()
+b() stack pointer: 0x16fc634f0
+b() frame pointer: 0x10019fd14
+b(): &param1:	0x16fc634ec	param1:	2
+b(): &param2:	0x16fc634e0	param2:	0xdeadbeefdeadbeef
+b(): &local: 	0x16fc634d8	local:	0xba5eba11ba5eba11
+main() local var address - b() local var address 176 bytes
+data at location 0x16fc634d8 is: 0xba5eba11ba5eba11
+data at location 0x16fc634e0 is: 0xdeadbeefdeadbeef
+data at location 0x16fc634e8 is: 0x26fc63500
+data at location 0x16fc634f0 is: 0x16fc63560
+data at location 0x16fc634f8 is: 0x10019fd08
+data at location 0x16fc63500 is: 0x16fc63580
+data at location 0x16fc63508 is: 0x16fc636c0
+data at location 0x16fc63510 is: 0x16fc63540
+data at location 0x16fc63518 is: 0x16fc6355c
+data at location 0x16fc63520 is: 0x16fc63550
+data at location 0x16fc63528 is: 0x16fc63548
+data at location 0x16fc63530 is: 0x8001ac000
+data at location 0x16fc63538 is: 0x10019fd14
+data at location 0x16fc63540 is: 0x16fc63560
+data at location 0x16fc63548 is: 0xba5eba11ba5eba11
+data at location 0x16fc63550 is: 0xdeadbeefdeadbeef
+data at location 0x16fc63558 is: 0x26fc63570
+data at location 0x16fc63560 is: 0x16fc635a0
+data at location 0x16fc63568 is: 0x10019fd9c
+data at location 0x16fc63570 is: 0x16fc63588
+data at location 0x16fc63578 is: 0x1
+data at location 0x16fc63580 is: 0x16fc636c0
