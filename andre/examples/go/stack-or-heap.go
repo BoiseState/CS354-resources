@@ -1,4 +1,5 @@
 // demonstration that a compiler should choose where var declarations exist
+// see stack-frame-deallocation.c for C's behavior (hint, its awesome!)
 package main
 
 var global *int32

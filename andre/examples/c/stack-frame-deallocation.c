@@ -1,30 +1,31 @@
+//does some hack-y stuff manipulating memory on the stack
+//see stack-frame-deallocation.go to see if its possible there
 #include <stdio.h>
 #include <stdlib.h>
 
 const static int *global;
 
-int a() {
+void a() {
 
-	char *string = malloc(8 * sizeof(char));
-	return (int) string;
+	int y = 13;
 
 }
 
 
 void f() {
 	int x = 12;
-	global = &x;
+	global = &x; //should x live on?
 
 }
 
 int main () {
 
 	f();
-	
-	printf("%d\n", *global);
+	//function is called and f() stack is now deallocated
+	printf("globals value:\t%d\nglobals ptr:\t%p\nglobals\taddress %p\n", *global, global, &global);
 	a();
-
-	printf("%d\n", *global);
+	//same stack space reused!
+	printf("globals value:\t%d\n", *global);
 
 
 }

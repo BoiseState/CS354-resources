@@ -21,7 +21,7 @@ void *b(int param1, void *param2) {
 	printf("main() local var address - b() local var address %ld bytes\n", (global - &local) * sizeof(void *));
 
 	int i = 0;
-	while (i < (global - &local)) {
+	while (i <= (global - &local)) {
 
 		printf("data at location %p is: %p\n", (&local + i), *(&local + i));
 		i += 1;
@@ -48,7 +48,7 @@ void *a(int param1, void *param2) {
 	printf("main() local var address - a() local var address %ld bytes\n", (global - &local) * sizeof(void *));
 
 	int i = 0;
-	while (i < (global - &local)) {
+	while (i <= (global - &local)) {
 
 		printf("data at location %p is: %p\n", (&local + i), *(&local + i));
 		i += 1;
@@ -68,6 +68,7 @@ int main() {
 
 	void *ptr1 = (void *) 1;
 	global = &ptr1;
-	printf("main(): &ptr1:\t\t%p param1:\t%p\n", &ptr1, ptr1);
+	printf("main(): &ptr1:\t\t%p ptr1:\t%p\n", &ptr1, ptr1);
+	printf("main(): &global:\t%p global:\t%p\n", &global, global);
 	a(1 + 1, (void *)0xDEADBEEFDEADBEEF);
 }
