@@ -6,6 +6,7 @@
 #+EXPORT_FILE_NAME: /ssh:csweb:public_html/pl.html
 
 * [[https://en.wikipedia.org/wiki/Assembly_language][Assembly Language]]
+  [[https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html][GCC Assembler Extensions]]
   [[https://www.felixcloutier.com/x86/][Intel x86]]
   [[https://mariokartwii.com/armv8][ARM: AArch64 Tutorial]]
   [[http://csweb.boisestate.edu/~buff/files/arm.pdf][ARM: AArch64, A64, AArch32, A32, T32, ARMv8]]
