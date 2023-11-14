@@ -1,0 +1,41 @@
+Name:
+
+Grade: /80
+
+Rubric for Prolog project:
+
+Overall Comments:
+
+
+-Submission
+	
+    - all .pl files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md: [5 points]
+
+	-Appropriate and explanitory comments: [5 points]
+
+
+Code design and style: 
+	-  meetone.pl is implemented [10 points]
+	-  meet.pl is implemented    [10 points]
+	-  test.pl is updates with appropriate tests for the predicates [10 points]
+
+	-Other comments: 
+
+
+Functionality:
+	- Program executes without errors or warnings: [5 points]
+
+	- test.pl runs and passes each test: [10 points]
+
+	- meetone.pl runs and produces the correct output for meeting time
+		8:30AM to 8:45AM [5 points]
+
+	- meet.pl runs and produces the correct output for meeting times
+		of Ann, Bob and Carla: [20 points]
+
+    -Other comments:
