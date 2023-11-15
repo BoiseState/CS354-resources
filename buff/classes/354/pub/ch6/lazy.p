@@ -15,7 +15,7 @@ var
 
 function sum(var seq:arr): integer;
 var
-   i:integer;
+   i:range;
 begin
    sum:=0;
    i:=lo;
