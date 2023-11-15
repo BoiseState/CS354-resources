@@ -11,6 +11,7 @@
   [[https://mariokartwii.com/armv8][ARM: AArch64 Tutorial]]
   [[http://csweb.boisestate.edu/~buff/files/arm.pdf][ARM: AArch64, A64, AArch32, A32, T32, ARMv8]]
   [[https://developer.arm.com/-/media/Arm%20Developer%20Community/PDF/Learn%20the%20Architecture/Armv8-A%20Instruction%20Set%20Architecture.pdf?revision=ebf53406-04fd-4c67-a485-1b329febfb3e][ARM: Armv8-A Instruction Set Architecture]]
+  [[http://csweb.boisestate.edu/~buff/files/arm64.pdf][ARM: A64 ARMv8 Reference Card]]
   [[http://csweb.boisestate.edu/~buff/files/MIPSISA.pdf][MIPS R4000 32- and 64-bit ISA]]
   [[http://csweb.boisestate.edu/~buff/files/mips_r4000_users_manual.pdf][MIPS R4000 User's Manual]]
   [[http://csweb.boisestate.edu/~buff/files/mips-iv.pdf][MIPS IV Instruction Set]]
