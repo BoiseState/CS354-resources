@@ -47,4 +47,10 @@ Part 3: Presentation (40 points)
 	- Programming language project demo.
 
 - Other comments: 
-	
+
+
+
+Lack of contribution from a team member can result in penalty of up
+to 100% in the project. This will be handled between the instructor
+and the team member in question. 
+
