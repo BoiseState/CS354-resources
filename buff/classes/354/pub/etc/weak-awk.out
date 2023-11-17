@@ -1,0 +1,16 @@
++ awk 'BEGIN { print 12+34 }'
+46
++ awk 'BEGIN { print 12+"34" }'
+46
++ awk 'BEGIN { print "12"+"34" }'
+46
++ awk 'BEGIN { print "12"+"34dog" }'
+46
++ awk 'BEGIN { print "12"+"3dog4" }'
+15
++ awk 'BEGIN { print "12"+"dog34" }'
+12
++ awk 'BEGIN { print 12+" 34" }'
+46
++ awk 'BEGIN { print 12+" 34 56" }'
+46

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -x
+
+awk 'BEGIN { print 12+34 }'
+
+awk 'BEGIN { print 12+"34" }'
+
+awk 'BEGIN { print "12"+"34" }'
+
+awk 'BEGIN { print "12"+"34dog" }'
+
+awk 'BEGIN { print "12"+"3dog4" }'
+
+awk 'BEGIN { print "12"+"dog34" }'
+
+awk 'BEGIN { print 12+" 34" }'
+
+awk 'BEGIN { print 12+" 34 56" }'
+
