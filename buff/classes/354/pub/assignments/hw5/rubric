@@ -1,18 +1,15 @@
-                                                                /43
+                                                                /38
 
 
 
 
 Part 1
 
-    Exercise 6.1				  /5
-    Associativity versus commutativity.
+    Exercise 6.25				  /5
+    Avoiding break.
 
-    Exercise 6.2				  /5
-    Unary versus binary.
-
-    Exercise 6.12				  /5
-    Short-circuit evaluation.
+    Exercise 6.26				  /5
+    Avoiding goto and break.
 
 Part 2
 
