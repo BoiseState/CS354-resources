@@ -1,5 +1,3 @@
-Name:
-
 Grade: /80
 
 Rubric for Javascript project:
