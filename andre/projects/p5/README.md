@@ -1,5 +1,5 @@
 
-# Programming Language Assignment 1: Scheme
+# Programming Language Assignment 2: Javascript
 
 * Author: Your Name
 * Class: CS354 Section #
@@ -16,7 +16,7 @@ Fall Semester, 2022
 
 ## Running the program
 
-    Please provide information on how to execute the function you wrote.
+    Please provide information on running the program
 
 ## General Reflection 
 
