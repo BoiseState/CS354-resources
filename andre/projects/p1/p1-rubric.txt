@@ -4,33 +4,31 @@ Rubric for Go project:
 
 Overall Comments:
 
-
 -Submission
-	
+
     - all go files that were required to complete the assignment
     - a README.md file that has been completed
 
 
 Documentation:
-	-README.md: [10 points]
+	-README.md: [5 points]
 
-	-Appropriate and explanitory comments: [5 points]
-
-
-Code design and style: 
-	- Each java class was ported to a Go package [15 points]
-
-	- Abstract class is approximated per the assignment [15 points]
-
-	- Accrue functions were converted to use goroutines [15 points]
-
-	-Other comments: 
+	-Appropriate and explanatory comments: [5 points]
 
 
-Functionality:
-	-Program executes without errors or warnings: [10 points]
+Visual Checks:
+	- Go code is organized in packages correctly [10 points]
 
-	- Accrual calculation works (see simple test in Bank.java) [10 points]
+	- Account.go has no definition of Accrue [10 points]
+
+	- goroutines and channel used to calculate interest [10 points]
+
+	-Other comments:
 
 
-    -Other comments:
+Automated Checks:
+	- run-test.sh output completes successfully [40 points]
+
+
+Extra Credit:
+    - Program outputs "4: bob: 1000.00" after 1000 parallel deposits [5 points]
