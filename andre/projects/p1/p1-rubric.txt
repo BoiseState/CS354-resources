@@ -1,0 +1,34 @@
+Grade: /80
+
+Rubric for Go project:
+
+Overall Comments:
+
+-Submission
+
+    - all go files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md: [5 points]
+
+	-Appropriate and explanatory comments: [5 points]
+
+
+Visual Checks:
+	- Go code is organized in packages correctly [10 points]
+
+	- Account.go has no definition of Accrue [10 points]
+
+	- goroutines and channel used to calculate interest [10 points]
+
+	-Other comments:
+
+
+Automated Checks:
+	- run-test.sh output completes successfully [40 points]
+
+
+Extra Credit:
+    - Program outputs "4: bob: 1000.00" after 1000 parallel deposits [5 points]

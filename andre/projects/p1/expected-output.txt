@@ -1,0 +1,4 @@
+1: ann: 100.00
+2: ann: 204.00
+3: bob: 153.00
+Total Interest: 7.00
