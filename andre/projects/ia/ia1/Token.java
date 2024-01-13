@@ -16,11 +16,11 @@ public class Token {
         this(token, token);
     }
 
-    public String tok() {
+    public String getToken() {
         return token;
     }
 
-    public String lex() {
+    public String getLexeme() {
         return lexeme;
     }
 
@@ -30,12 +30,14 @@ public class Token {
         Token t = null;
         if (o instanceof Token) {
             t = (Token) o;
+        } else {
+            return false;
         }
-        return token.equals(t.token);
+        return token.equals(t.getToken()) && lexeme.equals(t.getLexeme());
     }
 
     public String toString() {
-        return "<" + tok() + "," + lex() + ">";
+        return "<" + getToken() + "," + getLexeme() + ">";
     }
 
 }

@@ -22,7 +22,7 @@ public class ScannerTest {
         String prg = "4";
         Scanner scanner = new Scanner(prg);
         assertTrue(scanner.next());
-        assertEquals(new Token("num"), scanner.getCurrent());
+        assertEquals(new Token("num", "4"), scanner.getCurrent());
 
         assertFalse(scanner.next());
     }
@@ -40,7 +40,7 @@ public class ScannerTest {
         Scanner scanner = new Scanner(prg);
 
         assertTrue(scanner.next());
-        assertEquals(new Token("id"), scanner.getCurrent());
+        assertEquals(new Token("id", "x"), scanner.getCurrent());
 
         assertFalse(scanner.next());
     }
@@ -57,7 +57,7 @@ public class ScannerTest {
         Scanner scanner = new Scanner(prg);
 
         assertTrue(scanner.next());
-        assertEquals(new Token(";"), scanner.getCurrent());
+        assertEquals(new Token(";", ";"), scanner.getCurrent());
 
         assertFalse(scanner.next());
     }
