@@ -14,7 +14,7 @@ Overall Comments:
 Documentation:
 	-README.md: [10 points]
 
-	-Appropriate and explanitory inline comments: [5 points]
+	-Appropriate and explanatory inline comments: [5 points]
 
 
 Visual Checks: 
