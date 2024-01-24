@@ -83,12 +83,13 @@ public class Scanner {
      * @return boolean indicating if there are more tokens to scan.
      */
     public boolean next() {
-        if (!hasChar())
-            return false;
 
         while (hasChar() && whitespace.contains(posAsString())) {
             advance();
         }
+
+        if (!hasChar())
+            return false;
 
         String c = posAsString();
 
