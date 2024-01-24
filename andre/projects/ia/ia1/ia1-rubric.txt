@@ -15,15 +15,15 @@ Documentation:
 
 
 Visual Checks:
-	- next() has been completed and can recognize Tokens found in grammar1.txt [5 points]
+	- next() has been completed and can recognize each Token found in the assignment [5 points]
 
-	- Additional tests have been added to ScannerTest.java [5 points]
+	- Many additional tests have been added to ScannerTest.java [5 points]
 
 	- comments are implemented and tested [5 points]
 
-	-Other comments:
+	- Other comments:
 
 
 Automated Checks:
-	- run-test.sh demonstrates that all unit tests run [20 points]
+	- run-test.sh demonstrates that all unit tests run and pass [20 points]
 

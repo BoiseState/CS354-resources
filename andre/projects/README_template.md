@@ -28,7 +28,7 @@ about it to use it as quickly as possible?
 
 ## Results
 
-This section presents timing and other results of the experiments that
+This section presents timing and other results of any experiments that
 you were asked to perform as part of the project.
 
 ## Sources used

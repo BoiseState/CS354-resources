@@ -7,7 +7,7 @@ public class Scanner {
 
     private String program;      // source program being interpreted
     private int position;        // index of next char in program
-    private Token current;       // current (most recently scanned token)
+    private Token currentToken;       // current (most recently scanned token)
 
 
     private Set<String> whitespace = new HashSet<>();
@@ -23,7 +23,7 @@ public class Scanner {
     public Scanner(String program) {
         this.program = program;
         position = 0;
-        current = null;
+        currentToken = null;
         initWhitespace(whitespace);
         initLetters(letters);
         initKeywords(keywords);
@@ -44,29 +44,35 @@ public class Scanner {
         }
     }
 
-
     private void initWhitespace(Set<String> s) {
         s.add(" ");
         s.add("\n");
         s.add("\t");
     }
 
-    // handy string-processing methods
-
-    public boolean hasNext() {
-        return position >= program.length();
+    private void advance() {
+        this.position++;
     }
 
-    private void many(Set<String> s) {
-        while (!hasNext() && s.contains(program.charAt(position) + ""))
-            position++;
+    private String posAsString() {
+        return program.charAt(position) + "";
     }
 
-    private void past(char c) {
-        while (!hasNext() && c != program.charAt(position))
-            position++;
-        if (!hasNext() && c == program.charAt(position))
-            position++;
+    private Token nextKwID() {
+
+        int old = this.position;
+        advance();
+
+        while (hasChar() && letters.contains(posAsString())) {
+            advance();
+        }
+
+        String lexeme = program.substring(old, position);
+
+        if (keywords.contains(lexeme))
+            return new Token(lexeme, lexeme);
+        else
+            return new Token("id", lexeme);
     }
 
 
@@ -77,15 +83,19 @@ public class Scanner {
      * @return boolean indicating if there are more tokens to scan.
      */
     public boolean next() {
-        if (hasNext())
+        if (!hasChar())
             return false;
-        many(whitespace);
-        String c = program.charAt(position) + "";
+
+        while (hasChar() && whitespace.contains(posAsString())) {
+            advance();
+        }
+
+        String c = posAsString();
 
         if (letters.contains(c)) {
-            current = nextKwID();
+            currentToken = nextKwID();
         }
-        //	else if ...
+        //	rest here!
 
 
         else {
@@ -97,11 +107,13 @@ public class Scanner {
         return true;
     }
 
-    private Token nextKwID() {
-        int old = position;
-        many(letters);
-        String lexeme = program.substring(old, position);
-        return new Token((keywords.contains(lexeme) ? lexeme : "id"), lexeme);
+    /**
+     * Determines if the current position of the scanner is in the bounds of the
+     * program
+     * @return true if there are more characters in program
+     */
+    public boolean hasChar() {
+        return position < program.length();
     }
 
     /**
@@ -110,17 +122,17 @@ public class Scanner {
      * @throws SyntaxException - if current token is not the expected token
      */
     public void match(Token t) throws SyntaxException {
-        if (!t.equals(getCurrent())) {
+        if (!t.equalType(getCurrent())) {
             throw new SyntaxException(position, t, getCurrent());
         }
         next();
     }
 
     public Token getCurrent() throws SyntaxException {
-        if (current == null) {
+        if (currentToken == null) {
             throw new SyntaxException(position, new Token("ANY"), new Token("EMPTY"));
         }
-        return current;
+        return currentToken;
     }
 
     public int getPosition() {

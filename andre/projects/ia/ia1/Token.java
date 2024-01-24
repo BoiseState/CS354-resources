@@ -25,6 +25,10 @@ public class Token {
     }
 
 
+    public boolean equalType(Token t) {
+        return this.token.equals(t.token);
+    }
+
     @Override
     public boolean equals(Object o) {
         Token t = null;
