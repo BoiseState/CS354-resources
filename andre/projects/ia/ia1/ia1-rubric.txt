@@ -25,5 +25,5 @@ Visual Checks:
 
 
 Automated Checks:
-	- run-test.sh demonstrates that all unit tests run and pass [20 points]
+	- Your unit tests run and pass [20 points]
 
