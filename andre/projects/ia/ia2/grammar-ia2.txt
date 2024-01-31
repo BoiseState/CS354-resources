@@ -1,0 +1,11 @@
+expr  : term addop expr
+      | term
+term  : fact mulop term
+      | fact
+fact  : id
+      | num
+      | '(' expr ')'
+addop : '+'
+      | '-'
+mulop : '*'
+      | '/'

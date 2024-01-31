@@ -1,57 +1,104 @@
-import java.util.*;
-
-/*
- * This class is a recursive-descent parser,
- * modeled after the programming language's grammar.
- * It constructs and has-a Scanner for the program
- * being parsed.
-*/
-public class Parser 
-{
+/**
+ * A recursive descent parser
+ */
+public class Parser {
 
     private Scanner scanner;
 
-   
-
-    /*
-    * Creates a new scanner for the string to be parsed.
-    * Returns the parsed statement
-    * Throws SyntaxException if the scanner class throws one.
-    * @param program
-    */
-    public Node parse(String program) throws SyntaxException 
-    {
-		scanner=new Scanner(program);
-		scanner.next();
-		return parseBlock();
-		
+    /**
+     * Parse an input program and return a Node that is the root of the
+     * resulting parse tree.
+     *
+     * @param program String to be scanned and parsed
+     * @return the Root Node of a parse tree
+     * @throws SyntaxException - If there is a syntax error
+     */
+    public Node parse(String program) throws SyntaxException {
+        scanner = new Scanner(program);
+        scanner.next(); //"prime the pump"
+        return parseExpr();
     }
 
-    private NodeBlock parseBlock() {
+    /**
+     * TODO
+     *
+     * @return
+     * @throws SyntaxException
+     */
+    private NodeExpr parseExpr() throws SyntaxException {
 
+        NodeTerm term = parseTerm();
+        NodeAddop addop = parseAddop();
 
-	// return some kind of NodeBlock
-    	return null;
-     }
+        if (addop == null) {
+            return new NodeExpr(term);
+        } else {
+            NodeExpr expr = parseExpr();
+            return new NodeExpr(term, addop, expr);
+        }
+    }
 
-    private NodeAssn parseAssn() throws SyntaxException {
-	
-	Token id = scanner.curr();
-	
-	match("id");
-	match("=");
-	
-	Token num = scanner.curr();
-	
-	match("num");
-	
-	return new NodeAssn(id.lex(), Integer.parseInt(num.lex()));
-     }
+    /**
+     * TODO
+     * @return
+     * @throws SyntaxException
+     */
+    private NodeTerm parseTerm() throws SyntaxException {
 
+    }
 
+    /**
+     * TODO
+     * @return
+     * @throws SyntaxException
+     */
+    private NodeFact parseFact() throws SyntaxException {
 
-     private void match(String s) throws SyntaxException {
-	    scanner.match(new Token(s));
-     }
+        Token current = scanner.getCurrent();
 
+        if (current.equalType(new Token("id"))) {
+            match("id");
+            //TODO: return a new NodeFact Subclass for this case
+
+        } else if (current.equalType(new Token("num"))) {
+
+            //TODO: What tokens to match and what to return?
+        } else {
+
+            //TODO: What tokens to match and what to return?
+        }
+    }
+
+    /**
+     * Parses an addop nonterminal and returns it.
+     * @return a Node that represent an addop
+     * @throws SyntaxException if an invalid terminal is discovered
+     */
+    private NodeAddop parseAddop() throws SyntaxException {
+        Token addop = scanner.getCurrent();
+        if (addop.equalType(new Token("+"))) {
+            match("+");
+            return new NodeAddop(scanner.getPosition(), addop);
+
+        } else if (addop.equalType(new Token("-"))) {
+            match("-");
+            return new NodeAddop(scanner.getPosition(), addop);
+
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * TODO
+     * @return
+     * @throws SyntaxException
+     */
+    private NodeMulop parseMulop() throws SyntaxException {
+
+    }
+
+    private void match(String s) throws SyntaxException {
+        scanner.match(new Token(s));
+    }
 }

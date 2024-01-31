@@ -19,7 +19,7 @@ Documentation:
 Visual Checks:
 	- Go code is organized in packages correctly [10 points]
 
-	- Account.go has no definition of Accrue [10 points]
+	- Account.go has no implementation of Accrue [10 points]
 
 	- goroutines and channel used to calculate interest [10 points]
 

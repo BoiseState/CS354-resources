@@ -1,41 +1,40 @@
 import java.lang.reflect.Field;
 
-// This class, and its subclasses,
-// collectively model parse-tree nodes.
-// Each kind of node can be eval()-uated.
-
+/**
+ *
+ */
 public abstract class Node {
 
-    public int pos=0;
-    
-    
+    protected int position = 0;
+
+    /**
+     * From http://www.javapractices.com/topic/TopicAction.do?Id=55
+     * Using reflection to recursively print each member of each subclass in the tree.
+     * @return a string of parenthesised tree nodes.
+     */
     public String toString() {
-    	  StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder();
 
-    	  result.append( this.getClass().getName() );
-    	  result.append( " ( " );
+        result.append(this.getClass().getName());
+        result.append(" (");
 
-    	  //determine fields declared in this class only (no fields of superclass)
-    	  Field[] fields = this.getClass().getDeclaredFields();
+        //determine fields declared in this class only (no fields of superclass)
+        Field[] fields = this.getClass().getDeclaredFields();
 
-    	  //print field names paired with their values
-    	  for ( Field field : fields  ) {
-    	    result.append("  ");
-    	    try {
-    	      result.append( field.getName() );
-    	      result.append(": ");
-    	      //requires access to private field:
-    	      result.append( field.get(this) );
-    	    } catch ( IllegalAccessException ex ) {
-    	      System.out.println(ex);
-    	    }
-    	  }
-    	  result.append(" ) ");
+        //print field names paired with their values
+        for (Field field : fields) {
+            result.append(" ");
+            try {
+                result.append(field.getName());
+                result.append(": ");
+                //requires access to private field:
+                result.append(field.get(this));
+            } catch (IllegalAccessException ex) {
+                System.out.println(ex);
+            }
+        }
+        result.append(" )");
 
-    	  return result.toString();
-    	}
-    
-    
-
-
+        return result.toString();
+    }
 }
