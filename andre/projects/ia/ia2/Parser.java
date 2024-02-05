@@ -33,8 +33,9 @@ public class Parser {
         if (addop == null) {
             return new NodeExpr(term);
         } else {
-            NodeExpr expr = parseExpr();
-            return new NodeExpr(term, addop, expr);
+            NodeExpr expr=parseExpr();
+            expr.append(new NodeExpr(term,addop,null));
+            return expr;
         }
     }
 

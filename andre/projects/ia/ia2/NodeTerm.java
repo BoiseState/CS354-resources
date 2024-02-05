@@ -8,4 +8,8 @@ public class NodeTerm extends Node {
     public NodeTerm(NodeFact fact) {
 
     }
+
+    public append(NodeTerm term) {
+
+    }
 }

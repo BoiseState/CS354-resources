@@ -15,4 +15,18 @@ public class NodeExpr extends Node {
         this.addop = null;
         this.expr = null;
     }
+
+
+    public void append(NodeExpr expr) {
+        if (this.expr==null)
+        {
+            this.addop=expr.addop;
+            this.expr=expr;
+            expr.addop=null;
+        }
+        else
+        {
+            this.expr.append(expr);
+        }
+    }
 }
