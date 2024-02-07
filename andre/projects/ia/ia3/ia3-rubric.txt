@@ -1,0 +1,19 @@
+Grade: /40
+
+Rubric for ia3:
+
+Overall Comments:
+
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been updated with a new reflection: [5 points]
+
+Automated Checks:
+
+	- EvaluationTest passes (I'll run mine too!) [35 points]
+

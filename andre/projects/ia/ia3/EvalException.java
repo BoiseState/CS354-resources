@@ -1,6 +1,10 @@
 // (C) 2013 Jim Buffenbarger
 // All rights reserved.
 
+/**
+ * A runtime exception
+ * @author jim Buffenbarger
+ */
 public class EvalException extends Exception {
 
     private int pos;
