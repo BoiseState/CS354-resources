@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-static int a() {
-
+int a() {
 	return a();
 }
 
 int main() {
-
   a();
   return 0;
 }
