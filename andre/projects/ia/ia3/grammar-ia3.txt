@@ -10,6 +10,7 @@ term  : fact mulop term
 fact  : id 
       | num
       | '(' expr ')'
+      | '-' fact
 addop : '+'
       | '-'
 mulop : '*'

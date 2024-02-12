@@ -11,10 +11,6 @@ type aligned_data struct {
 	c int32 //4 bytes
 }
 
-type smaller_data struct {
-	a int8
-}
-
 func main() {
 	s := new(aligned_data)
 
