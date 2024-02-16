@@ -88,8 +88,10 @@ public class Scanner {
             advance();
         }
 
-        if (!hasChar())
+        if (!hasChar()) {
+            currentToken = new Token("EOF");
             return false;
+        }
 
         String c = posAsString();
 
