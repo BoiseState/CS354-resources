@@ -3,7 +3,7 @@
  */
 public class Environment {
 
-    public double put(String var, int val) {
+    public double put(String var, double val) {
       	return -1;
     }
     public double get(int pos, String var) throws EvalException {
