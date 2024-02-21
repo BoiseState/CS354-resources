@@ -18,17 +18,10 @@ var myClass = (function (a , b) {
 
 });
 
-//two instances of the class
-var instance1 = myClass(1, 2);
-var instance2 = myClass(3, 4);
+let a = 1;
+let instance1 = myClass(a,2);
+
+a = 3;
+
 
 instance1.printAdd();
-instance2.printAdd();
-
-//can actually create a new member with the same name, but doesn't modify
-instance1.a = 4;
-
-instance1.printAdd();
-
-//this actually creates a new attribute on instance1
-console.log(instance1.a);
