@@ -1,4 +1,4 @@
-Grade: /80
+Grade: /30
 
 Rubric for LaTeX Proposal:
 
@@ -12,15 +12,14 @@ Overall Comments:
 
 
 Documentation:
-	- Website Layout Proposal: [20 points]
+	- Language Overview Proposal: [10 points]
 
 	- Programming Project Proposal:
-		- Evaluation Plan		[10 points]
-		- Project Management Materials 	[10 points]
+		- Evaluation Plan		[5 points]
+		- Project Management Materials 	[5 points]
 
-	- Presentation Proposal [20 points]
+	- Presentation Proposal [10 points]
 
-	- Demonstration of Bibliography LaTeX feature [20 points]
 
 	-Lack of contribution from a team member can result in a penalty of up to a 100% in
 	 this project. This will be handled separately between the instructor and the team.
