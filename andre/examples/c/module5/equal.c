@@ -1,19 +1,19 @@
 
-struct A{
+typedef struct {
     int a, b;
-};
+} A;
 
-struct B {
-    int c, b;
-};
+typedef struct {
+    int a, b;
+} B;
 
-void test(struct A param) {
+void test(A a) {
     return;
 }
 
 int main() {
 
-    struct B myB;
+    B myB;
     test(myB);
     return 0;
 }
