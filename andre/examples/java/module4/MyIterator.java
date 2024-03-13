@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class MyIterator {
 
-
 	public static void main(String[] args) {
 
 		ArrayList<Integer> collection = new ArrayList<>();
