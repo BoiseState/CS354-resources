@@ -1,0 +1,26 @@
+Grade: /40
+
+Rubric for ia5:
+
+Overall Comments:
+
+-Submission
+
+    - all files that were required to complete the assignment
+    - a README.md file that has been completed
+
+
+Documentation:
+	-README.md has been updated with a new reflection: [5 points]
+
+Automated Checks:
+
+	- Tests for static scope pass (I'll run mine too!) [35 points]
+
+
+Extra Credit [30 points]
+
+    - Function Definitions, calls and recursion work [5 points]
+    - Nested function definitions and static scope work correctly [10 points]
+    - Functions can be passed as parameters and returned from other functions [15 points]
+
