@@ -1,4 +1,4 @@
-const data = require("./data.json");
+const data = require("./json/data.json");
 
 //for..in loops allow iteration through a JS object
 for (let k in data) {

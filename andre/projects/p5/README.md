@@ -1,24 +1,55 @@
-
-# Programming Language Assignment 2: Javascript
+# Project 5: Javascript
 
 * Author: Your Name
 * Class: CS354 Section #
-* Semester: 
+* Semester:
+
+## Overview
+
+Concisely explain what the program does. If this exceeds a couple of
+sentences, you're going too far. Generally you should be pulling this
+right from the project specification. I don't want you to just cut and
+paste, but paraphrase what is stated in the project specification.
+
+## Reflection
+
+Write a two paragraph reflection describing your experience with this
+project.  Talk about what worked well and what was challenging.  
+Did you run into an issue that took some time to figure out?  
+Tell us about it. What did you enjoy, what was less desirable? Feel
+free to add other items (within the two paragraph limit).
+
+## Compiling and Using
+
+This section should tell the user how to compile your code.  It is
+also appropriate to instruct the user how to use your code. Does your
+program require user input? If so, what does your user need to know
+about it to use it as quickly as possible?
+
+## Results
+
+This section presents timing and other results of any experiments that
+you were asked to perform as part of the project.
+
+## Sources used
+
+If you used any sources outside of the lecture notes, class lab files,
+or text book you need to list them here. If you looked something up on
+stackoverflow.com and fail to cite it in this section it will be
+considered plagiarism and be dealt with accordingly. So be safe CITE!
+
+Finally, remove these instructions from your README.md after you are finished!
+
+----------
+
+## Notes
+
+* This README.md template is using Markdown. Here is some help on using Markdown:
+  [markdown cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 
-## Project Description
+* Markdown can be edited and viewed natively in most IDEs such as Eclipse and VS Code. Just toggle
+  between the Markdown source and preview tabs.
 
-A brief description of the project.
-
-## Project semester and year
-
-Fall Semester, 2022
-
-## Running the program
-
-    Please provide information on running the program
-
-## General Reflection 
-
-    What stood out to you on the assignment, what helped, or
-    anything else you'd like to say related to the assignment.
+* To preview your README.md output online, you can copy your file contents to a Markdown editor/previewer
+  such as [https://stackedit.io/editor](https://stackedit.io/editor).
