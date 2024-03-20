@@ -20,7 +20,7 @@ Automated Checks:
 
 Extra Credit [30 points]
 
-    - Function Definitions, calls and recursion work [5 points]
+    - Function Definitions, calls and recursion work [10 points]
     - Nested function definitions and static scope work correctly [10 points]
-    - Functions can be passed as parameters and returned from other functions [15 points]
+    - Functions can be passed as parameters and returned from other functions [10 points]
 
