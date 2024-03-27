@@ -5,7 +5,7 @@ function foo() {
     console.log('foo');
 };
 
-//boo(); //parsing error
+boo(); //error
 
 //functions are variables containing values
 var boo = function () {
