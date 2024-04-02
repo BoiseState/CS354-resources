@@ -11,9 +11,9 @@ func f() {
 
 }
 
-func g() (y int32) {
-	y = 13
-	return
+func g() int32 {
+	var y int32 = 13
+	return y
 }
 
 func main() {

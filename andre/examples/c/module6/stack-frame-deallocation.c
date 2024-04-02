@@ -13,6 +13,7 @@ void a() {
 
 
 void f() {
+    //char y = 'a'; // what if we put something before it?
 	int x = 12;
 	global = &x; //should x live on?
 
