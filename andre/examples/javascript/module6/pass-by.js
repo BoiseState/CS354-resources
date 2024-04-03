@@ -4,8 +4,8 @@ let obj = {
 };
 
 let f = function(x) {
-    x.a = 456;
-    //x = {}; cannot change it to a different object
+    //x.a = 456;
+    x = {}; //cannot change it to a different object
 };
 
 console.log(obj.a); //123

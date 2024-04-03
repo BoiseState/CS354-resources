@@ -10,4 +10,5 @@ let c = function(x) {
     }
     b(x);
 }
-c(1);
+let x= 1;
+c(x);

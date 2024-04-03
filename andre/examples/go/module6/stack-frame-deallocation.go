@@ -7,7 +7,7 @@ var global *int32
 
 func f() {
 	var x int32 = 12
-	global = &x //x must live on
+	//global = &x //x must live on
 
 }
 

@@ -16,9 +16,9 @@ void *subr(void *vargp)
     return 0;
 }
 
-int main() 
+int main()
 {
-    register int value = 0; //change to volatile int, and register int
+    int value = 0; //change to volatile int, and register int
 	pthread_t thread_id;
 	pthread_create(&thread_id, NULL, subr, (void *)&value);
     sleep(5);

@@ -13,7 +13,7 @@ void a() {
 
 
 void f() {
-    //char y = 'a'; // what if we put something before it?
+    char y = 'a'; // what if we put something before it?
 	int x = 12;
 	global = &x; //should x live on?
 
@@ -25,7 +25,8 @@ int main () {
 	//function is called and f() stack is now deallocated
 	printf("globals value:\t%d\nglobals ptr:\t%p\nglobals\taddress %p\n", *global, global, &global);
 	a();
-	//same stack space reused!
+
+	//now what happens?
 	printf("globals value:\t%d\n", *global);
 
 

@@ -25,21 +25,22 @@ public class PassBy {
     }
 
     public static void main(String[] args) {
-        int prim = 3; 
-        primitive(prim);
-
-        System.out.println(prim);
+        int prim = 3;
+//        primitive(prim);
+//
+//        System.out.println(prim);
 
         Integer ref = 3;
 
         reference(ref);
 
         System.out.println(ref);
-
-        Container container = new Container(3); 
+//
+        Container container = new Container(prim);
 
         reference2(container);
 
         System.out.println(container.a);
+        System.out.println(prim);
     }
 }
