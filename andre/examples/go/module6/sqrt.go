@@ -23,11 +23,12 @@ func sqrt(x float64) float64 {
 	improve := func(guess float64) float64 {
 		return average(guess, (x / guess))
 	}
-	sqrtIter := func(guess float64) float64 {
+	var sqrtIter func(float642 float64) float64 //non-orthogonal function recursion
+	sqrtIter = func(guess float64) float64 {
 		if goodEnough(guess) {
 			return guess
 		} else {
-			return sqrtIter(improve(guess)) //stuck!
+			return sqrtIter(improve(guess))
 		}
 	}
 	return sqrtIter(1.0)
