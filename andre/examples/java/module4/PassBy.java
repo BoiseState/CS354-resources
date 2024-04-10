@@ -29,12 +29,12 @@ public class PassBy {
 //        primitive(prim);
 //
 //        System.out.println(prim);
-
-        Integer ref = 3;
-
-        reference(ref);
-
-        System.out.println(ref);
+//
+//        Integer ref = new Integer(3);
+//
+//        reference(ref);
+//
+//        System.out.println(ref);
 //
         Container container = new Container(prim);
 
