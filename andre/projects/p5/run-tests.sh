@@ -8,7 +8,7 @@ for i in ./test-cases/*.json
 do
 	echo "======================================================================="
 	echo "Running Test $i"
-	node driver.js $i user | sort -t ':' -k2,2nr -k1,1f > ${i}_test.out
+	node driver.js $i user | LC_COLLATE=C sort -t ':' -k2,2nr -k1,1f > ${i}_test.out
 	echo "created ${i}_test.out"
 	diff -B -w ${i}_test.out $i.out
 	result=$?
