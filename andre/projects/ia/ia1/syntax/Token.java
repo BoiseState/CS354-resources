@@ -1,7 +1,8 @@
-// This class models a token, which has two parts:
-// 1) the token itself (e.g., "id" or "+")
-// 2) the token's lexeme (e.g., "foo")
+package syntax;
 
+/**
+ * A Token for a programming language
+ */
 public class Token {
 
     private String token;

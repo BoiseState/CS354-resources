@@ -1,3 +1,5 @@
+package node;
+
 import java.lang.reflect.Field;
 
 /**
@@ -8,7 +10,7 @@ public abstract class Node {
     protected int position = 0;
 
     /**
-     * From http://www.javapractices.com/topic/TopicAction.do?Id=55
+     * From <a href="http://www.javapractices.com/topic/TopicAction.do?Id=55">...</a>
      * Using reflection to recursively print each member of each subclass in the tree.
      * @return a string of parenthesised tree nodes.
      */

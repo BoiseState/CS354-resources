@@ -1,9 +1,11 @@
+package syntax;
+
 import java.util.*;
 
 /**
  * Scanner for programming language
  */
-public class Scanner {
+public class Lexer {
 
     private String program;      // source program being interpreted
     private int position;        // index of next char in program
@@ -20,7 +22,7 @@ public class Scanner {
      *
      * @param program - the program text to scan
      */
-    public Scanner(String program) {
+    public Lexer(String program) {
         this.program = program;
         position = 0;
         currentToken = null;

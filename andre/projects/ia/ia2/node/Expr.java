@@ -1,23 +1,25 @@
-public class NodeExpr extends Node {
+package node;
 
-    protected NodeTerm term;
-    protected NodeAddop addop;
-    protected NodeExpr expr;
+public class Expr extends Node {
 
-    public NodeExpr(NodeTerm term, NodeAddop addop, NodeExpr expr) {
+    protected Term term;
+    protected Addop addop;
+    protected Expr expr;
+
+    public Expr(Term term, Addop addop, Expr expr) {
         this.term = term;
         this.addop = addop;
         this.expr = expr;
     }
 
-    public NodeExpr(NodeTerm term) {
+    public Expr(Term term) {
         this.term = term;
         this.addop = null;
         this.expr = null;
     }
 
 
-    public void append(NodeExpr expr) {
+    public void append(Expr expr) {
         if (this.expr==null)
         {
             this.addop=expr.addop;

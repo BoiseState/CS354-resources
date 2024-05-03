@@ -15,7 +15,7 @@ let obj = (function () {
 
 /*
 export it! This is from CommonJS, a module framework. 
-Note, only in nodejs. On browser side, a different implimentation is used: 
+Note, only in nodejs. On browser side, a different implementation is used:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 */
 module.exports = obj;

@@ -1,21 +1,25 @@
+package syntax;
+
+import node.*;
+
 /**
  * A recursive descent parser
  */
 public class Parser {
 
-    private Scanner scanner;
+    private Lexer lexer;
 
     /**
-     * Parse an input program and return a Node that is the root of the
+     * Parse an input program and return a node.Node that is the root of the
      * resulting parse tree.
      *
      * @param program String to be scanned and parsed
-     * @return the Root Node of a parse tree
+     * @return the Root node.Node of a parse tree
      * @throws SyntaxException - If there is a syntax error
      */
     public Node parse(String program) throws SyntaxException {
-        scanner = new Scanner(program);
-        scanner.next(); //"prime the pump"
+        lexer = new Lexer(program);
+        lexer.next(); //"prime the pump"
         return parseExpr();
     }
 
@@ -25,16 +29,16 @@ public class Parser {
      * @return
      * @throws SyntaxException
      */
-    private NodeExpr parseExpr() throws SyntaxException {
+    private Expr parseExpr() throws SyntaxException {
 
-        NodeTerm term = parseTerm();
-        NodeAddop addop = parseAddop();
+        Term term = parseTerm();
+        Addop addop = parseAddop();
 
         if (addop == null) {
-            return new NodeExpr(term);
+            return new Expr(term);
         } else {
-            NodeExpr expr=parseExpr();
-            expr.append(new NodeExpr(term,addop,null));
+            Expr expr=parseExpr();
+            expr.append(new Expr(term,addop,null));
             return expr;
         }
     }
@@ -44,7 +48,7 @@ public class Parser {
      * @return
      * @throws SyntaxException
      */
-    private NodeTerm parseTerm() throws SyntaxException {
+    private Term parseTerm() throws SyntaxException {
 
     }
 
@@ -53,13 +57,13 @@ public class Parser {
      * @return
      * @throws SyntaxException
      */
-    private NodeFact parseFact() throws SyntaxException {
+    private Fact parseFact() throws SyntaxException {
 
-        Token current = scanner.getCurrent();
+        Token current = lexer.getCurrent();
 
         if (current.equalType(new Token("id"))) {
             match("id");
-            //TODO: return a new NodeFact Subclass for this case
+            //TODO: return a new node.NodeFact Subclass for this case
 
         } else if (current.equalType(new Token("num"))) {
 
@@ -72,18 +76,18 @@ public class Parser {
 
     /**
      * Parses an addop nonterminal and returns it.
-     * @return a Node that represent an addop
+     * @return a node.Node that represent an addop
      * @throws SyntaxException if an invalid terminal is discovered
      */
-    private NodeAddop parseAddop() throws SyntaxException {
-        Token addop = scanner.getCurrent();
+    private Addop parseAddop() throws SyntaxException {
+        Token addop = lexer.getCurrent();
         if (addop.equalType(new Token("+"))) {
             match("+");
-            return new NodeAddop(scanner.getPosition(), addop);
+            return new Addop(lexer.getPosition(), addop);
 
         } else if (addop.equalType(new Token("-"))) {
             match("-");
-            return new NodeAddop(scanner.getPosition(), addop);
+            return new Addop(lexer.getPosition(), addop);
 
         } else {
             return null;
@@ -100,6 +104,6 @@ public class Parser {
     }
 
     private void match(String s) throws SyntaxException {
-        scanner.match(new Token(s));
+        lexer.match(new Token(s));
     }
 }
