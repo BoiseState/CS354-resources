@@ -1,6 +1,6 @@
 import java.io.File;
 
-public class Parser {
+public class JsonWalker {
 
     private Store store;
     private int numberOfFeaturesChecked;
@@ -10,7 +10,7 @@ public class Parser {
      * @param filename - a file with data that is assumed to be valid JSON
      * @param store -
      */
-    public Parser(String filename, Store store) {
+    public JsonWalker(String filename, Store store) {
         File file = new File(filename);
         this.store = store;
         this.numberOfFeaturesChecked = 0;
@@ -70,7 +70,7 @@ public class Parser {
      *     "ottwiz"
      *
      */
-    public void parse(String tag) {
+    public void walk(String tag) {
         /*
             TODO:
          */
