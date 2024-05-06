@@ -1,4 +1,4 @@
-prog     : block
+prog     : block 'EOF'
 block    : stmt ';' block
          | stmt
 stmt     : assn

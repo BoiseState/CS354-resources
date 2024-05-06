@@ -2,22 +2,16 @@ package shapes
 
 import "fmt"
 
-type ISquare interface {
-	IShape
-}
-
 type Square struct {
 	x int32
 }
 
-func CreateNewSquare(x int32) (s *Square) {
+func NewSquare(x int32) (s *Square) {
 	s = new(Square)
-	s.Init(x)
 	return
-}
-
-func (s *Square) Init(x int32) {
-	s.x = x
+	/*alternatively:
+	return &Square{x: x}
+	*/
 }
 
 func (s *Square) Area() (a float64) {

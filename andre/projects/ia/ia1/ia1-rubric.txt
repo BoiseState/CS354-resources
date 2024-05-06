@@ -17,7 +17,7 @@ Documentation:
 Visual Checks:
 	- next() has been completed and can recognize each Token found in the assignment [5 points]
 
-	- Many additional tests have been added to ScannerTest.java [5 points]
+	- Many additional tests have been added to LexerTest.java [5 points]
 
 	- comments are implemented and tested [5 points]
 

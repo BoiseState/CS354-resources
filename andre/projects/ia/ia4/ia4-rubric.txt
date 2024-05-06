@@ -15,5 +15,5 @@ Documentation:
 
 Automated Checks:
 
-	-  passes (I'll run mine too!) [35 points]
+	- EvaluationTest passes (I'll run mine too!) [35 points]
 

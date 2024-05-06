@@ -1,4 +1,4 @@
-expr  : term addop expr
+expr  : term addop expr 'EOF'
       | term
 term  : fact mulop term
       | fact

@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * Uses Junit5.
  */
-public class ScannerTest {
+public class LexerTest {
 
     /**
      * Simply creates a 'program' that has only one token. When scanned,
@@ -27,6 +27,7 @@ public class ScannerTest {
         assertEquals(new Token("num", "4"), lexer.getCurrent());
 
         assertFalse(lexer.next());
+        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
     }
 
 
@@ -45,6 +46,7 @@ public class ScannerTest {
         assertEquals(new Token("id", "x"), lexer.getCurrent());
 
         assertFalse(lexer.next());
+        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
     }
 
 
@@ -62,5 +64,6 @@ public class ScannerTest {
         assertEquals(new Token(";", ";"), lexer.getCurrent());
 
         assertFalse(lexer.next());
+        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
     }
 }

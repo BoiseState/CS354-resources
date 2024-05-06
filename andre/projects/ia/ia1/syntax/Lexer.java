@@ -3,7 +3,7 @@ package syntax;
 import java.util.*;
 
 /**
- * Scanner for programming language
+ * Lexical Analyzer for CS354 programming language
  */
 public class Lexer {
 
@@ -118,7 +118,12 @@ public class Lexer {
      * @return true if there are more characters in program
      */
     public boolean hasChar() {
-        return position < program.length();
+        if (position < program.length()) {
+            return true;
+        } else {
+            currentToken = new Token("EOF");
+            return false;
+        }
     }
 
     /**
@@ -133,6 +138,11 @@ public class Lexer {
         next();
     }
 
+    /**
+     * Retrieves the most recent token read by the lexer
+     * @return - most recent token
+     * @throws SyntaxException - if no token has ever been read!
+     */
     public Token getCurrent() throws SyntaxException {
         if (currentToken == null) {
             throw new SyntaxException(position, new Token("ANY"), new Token("EMPTY"));
@@ -140,6 +150,10 @@ public class Lexer {
         return currentToken;
     }
 
+    /**
+     * Getter for position of the lexer in the program
+     * @return index of the current position of the scanner
+     */
     public int getPosition() {
         return position;
     }
