@@ -23,11 +23,9 @@ public class LexerTest {
 
         String prg = "4";
         Lexer lexer = new Lexer(prg);
-        assertTrue(lexer.next());
-        assertEquals(new Token("num", "4"), lexer.getCurrent());
+        assertEquals(new Token("num", "4"), lexer.next());
 
-        assertFalse(lexer.next());
-        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
+        assertEquals(new Token("EOF", "EOF"), lexer.next());
     }
 
 
@@ -41,12 +39,9 @@ public class LexerTest {
 
         String prg = "x";
         Lexer lexer = new Lexer(prg);
+        assertEquals(new Token("id", "x"), lexer.next());
 
-        assertTrue(lexer.next());
-        assertEquals(new Token("id", "x"), lexer.getCurrent());
-
-        assertFalse(lexer.next());
-        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
+        assertEquals(new Token("EOF", "EOF"), lexer.next());
     }
 
 
@@ -60,10 +55,8 @@ public class LexerTest {
         String prg = ";";
         Lexer lexer = new Lexer(prg);
 
-        assertTrue(lexer.next());
-        assertEquals(new Token(";", ";"), lexer.getCurrent());
+        assertEquals(new Token(";", ";"), lexer.next());
 
-        assertFalse(lexer.next());
-        assertEquals(new Token("EOF", "EOF"), lexer.getCurrent());
+        assertEquals(new Token("EOF", "EOF"), lexer.next());
     }
 }

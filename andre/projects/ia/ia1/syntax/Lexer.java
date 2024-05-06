@@ -9,7 +9,6 @@ public class Lexer {
 
     private String program;      // source program being interpreted
     private int position;        // index of next char in program
-    private Token currentToken;       // current (most recently scanned token)
 
 
     private Set<String> whitespace = new HashSet<>();
@@ -25,7 +24,6 @@ public class Lexer {
     public Lexer(String program) {
         this.program = program;
         position = 0;
-        currentToken = null;
         initWhitespace(whitespace);
         initLetters(letters);
         initKeywords(keywords);
@@ -56,8 +54,12 @@ public class Lexer {
         this.position++;
     }
 
-    private String posAsString() {
-        return program.charAt(position) + "";
+    private String peek() {
+        if (hasChar()) {
+            return program.charAt(position) + "";
+        } else {
+            return null;
+        }
     }
 
     private Token nextKwID() {
@@ -65,7 +67,7 @@ public class Lexer {
         int old = this.position;
         advance();
 
-        while (hasChar() && letters.contains(posAsString())) {
+        while (hasChar() && letters.contains(peek())) {
             advance();
         }
 
@@ -82,34 +84,25 @@ public class Lexer {
      * Determines the kind of the next token (e.g., "id") and calls the
      * appropriate method to scan the token's lexeme (e.g., "foo").
      *
-     * @return boolean indicating if there are more tokens to scan.
+     * @return the scanned token.
      */
-    public boolean next() {
+    public Token next() {
 
-        while (hasChar() && whitespace.contains(posAsString())) {
+        while (hasChar() && whitespace.contains(peek())) {
             advance();
         }
 
         if (!hasChar()) {
-            currentToken = new Token("EOF");
-            return false;
-        }
-
-        String c = posAsString();
-
-        if (letters.contains(c)) {
-            currentToken = nextKwID();
+            return new Token("EOF");
+        } else if (hasChar() && letters.contains(peek())) {
+            return nextKwID();
         }
         //	rest here!
-
-
         else {
             System.err.println("illegal character at position "+ position);
             position++;
             return next();
         }
-
-        return true;
     }
 
     /**
@@ -118,36 +111,7 @@ public class Lexer {
      * @return true if there are more characters in program
      */
     public boolean hasChar() {
-        if (position < program.length()) {
-            return true;
-        } else {
-            currentToken = new Token("EOF");
-            return false;
-        }
-    }
-
-    /**
-     * Scan's the next lexeme if the current token is the expected token.
-     * @param t - the expected token
-     * @throws SyntaxException - if current token is not the expected token
-     */
-    public void match(Token t) throws SyntaxException {
-        if (!t.equalType(getCurrent())) {
-            throw new SyntaxException(position, t, getCurrent());
-        }
-        next();
-    }
-
-    /**
-     * Retrieves the most recent token read by the lexer
-     * @return - most recent token
-     * @throws SyntaxException - if no token has ever been read!
-     */
-    public Token getCurrent() throws SyntaxException {
-        if (currentToken == null) {
-            throw new SyntaxException(position, new Token("ANY"), new Token("EMPTY"));
-        }
-        return currentToken;
+        return position < program.length();
     }
 
     /**

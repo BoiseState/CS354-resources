@@ -8,6 +8,7 @@ import node.*;
 public class Parser {
 
     private Lexer lexer;
+    private Token lookahead;
 
     /**
      * Parse an input program and return a node.Node that is the root of the
@@ -18,9 +19,11 @@ public class Parser {
      * @throws SyntaxException - If there is a syntax error
      */
     public Node parse(String program) throws SyntaxException {
-        lexer = new Lexer(program);
-        lexer.next(); //"prime the pump"
-        return parseExpr();
+        scanner = new Lexer(program);
+        lookahead = scanner.next(); //"prime the pump"
+        Expr expr = parseExpr();
+        match("EOF");
+        return expr;
     }
 
     /**
@@ -59,7 +62,7 @@ public class Parser {
      */
     private Fact parseFact() throws SyntaxException {
 
-        Token current = lexer.getCurrent();
+        Token current = lookahead;
 
         if (current.equalType(new Token("id"))) {
             match("id");
@@ -79,15 +82,15 @@ public class Parser {
      * @return a node.Node that represent an addop
      * @throws SyntaxException if an invalid terminal is discovered
      */
-    private Addop parseAddop() throws SyntaxException {
-        Token addop = lexer.getCurrent();
-        if (addop.equalType(new Token("+"))) {
+    private NodeAddop parseAddop() throws SyntaxException {
+        Token addop = lookahead;
+        if (addop.equalType("+")) {
             match("+");
-            return new Addop(lexer.getPosition(), addop);
+            return new NodeAddop(scanner.getPosition(), addop);
 
-        } else if (addop.equalType(new Token("-"))) {
+        } else if (addop.equalType("-")) {
             match("-");
-            return new Addop(lexer.getPosition(), addop);
+            return new NodeAddop(scanner.getPosition(), addop);
 
         } else {
             return null;
@@ -104,6 +107,10 @@ public class Parser {
     }
 
     private void match(String s) throws SyntaxException {
-        lexer.match(new Token(s));
+        if (lookahead.equalType(s)) {
+            lookahead = scanner.next();
+        } else {
+            throw new SyntaxException(scanner.getPosition(), new Token(s), lookahead);
+        }
     }
 }
