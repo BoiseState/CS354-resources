@@ -16,7 +16,7 @@ Overall Comments:
 Documentation:
 	-README.md: [10 points]
 
-	-Appropriate and explanitory comments: [5 points]
+	-Appropriate and explanatory comments: [5 points]
 
 
 Code design and style: 

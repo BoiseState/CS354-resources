@@ -25,9 +25,12 @@ public class Token {
         return lexeme;
     }
 
-
     public boolean equalType(Token t) {
         return this.token.equals(t.token);
+    }
+
+    public boolean equalType(String s) {
+        return this.token.equals(s);
     }
 
     @Override

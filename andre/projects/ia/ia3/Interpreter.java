@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 /*
- * A simple REPL for your interpreter
+ * A simple REPL for the interpreter
  */
 public class Interpreter {
 

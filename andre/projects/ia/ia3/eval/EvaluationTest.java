@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+/**
+ * System tests for the semantic actions of the programming language.
+ */
 class EvaluationTest {
 
     private Parser parser;
