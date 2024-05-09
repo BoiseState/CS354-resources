@@ -14,8 +14,6 @@ let obj = (function () {
 });
 
 /*
-export it! This is from CommonJS, a module framework. 
-Note, only in nodejs. On browser side, a different implementation is used:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+export it! This is from CommonJS, the module framework used for many years
 */
 module.exports = obj;

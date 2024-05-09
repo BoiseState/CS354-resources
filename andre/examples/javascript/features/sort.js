@@ -2,12 +2,12 @@
 
 //functions are higher order, and can be passed to other functions. 
 
-//lets use array.sort as an example
+//let's use array.sort as an example
 
-var a = [3, 1, 4, 1, 5, 9]
+const a = [3, 1, 4, 1, 5, 9]
 
 
-var b = a.sort(function (x, y) {
+let b = a.sort(function (x, y) {
     if (x < y) {
         return -1;
     }
