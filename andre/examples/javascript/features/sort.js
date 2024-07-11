@@ -1,9 +1,5 @@
-
-
-//functions are higher order, and can be passed to other functions. 
-
+//functions are higher order, and can be passed to other functions.
 //let's use array.sort as an example
-
 const a = [3, 1, 4, 1, 5, 9]
 
 

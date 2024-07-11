@@ -1,9 +1,5 @@
+// TODO
 const sleep = require("./sleep");
-
-/*
-    Now use sleep directly with async and await
-    much much easier to read!
-*/
 
 const somethingElse = async function() {
     await sleep(1000);

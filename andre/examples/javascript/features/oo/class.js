@@ -1,3 +1,5 @@
+// Newer versions of JS added more syntax to hide the prototypal object model.
+// keywords look just like java, but behave differently under the hood
 class Vehicle {
     constructor(color) {
         this.vColor = color;
@@ -18,7 +20,7 @@ class Vehicle {
     }
 }
 
-//additionally, class can be used in an expression
+// additionally, class can be used in an expression
 const Vehicle2 = class {
     constructor(color) {
         this.color = color;
@@ -37,3 +39,5 @@ class Bus extends Vehicle {
 
 }
 
+const myBus = new Bus();
+//myBus.prototype is Vehicle

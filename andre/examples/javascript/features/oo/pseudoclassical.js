@@ -1,34 +1,30 @@
 // JavaScript was worried about using too unfamiliar of concepts for mainstream programmers at the time
-//Keywords and concepts that you are used to appear, but they do different things. 
-//example: 'new' operator and constructor functions
+// Keywords and concepts that you are used to appear, but they do different things.
+// example: 'new' operator and constructor functions
 
-//functions that are designed to be called with 'new' are capitalized by convention
-var Vehicle = function (color) {
+// functions that are designed to be called with 'new' are capitalized by convention
+const Vehicle = function (color) {
     //this does something different when the function is called with 'new' 
     this.color = color;
 }
 
+// Objects in JS use prototypal inheritance chain.
+// to find a name, the current object is searched, then its prototype and so on up the chain
 Vehicle.prototype.get_color = function () {
     return this.color;
 }
 
 //create an object
-
-var myVehicle = new Vehicle('grey');
+//This should be done with the new keyword. If not, 'this' refers to the global 'this'
+const myVehicle = new Vehicle('grey');
 
 console.log(myVehicle.get_color());
 
-//something bad without 'new'. 'this' is bound to the global object...
+// Bad without 'new'. 'this' is bound to the global object...
+const otherVehicle = Vehicle('purple');
+console.log(this.color); //undefined?
 
-var otherVehicle = Vehicle('purple');
-
-//console.log(otherVehicle.get_color()); // error! 
-
-//console.log(this.color); //undefined? 
-
-
-//Inheritance
-
+// Inheritance
 var Car = function (color, topSpeed) {
     this.color = color;
     this.topSpeed = topSpeed;
@@ -42,7 +38,7 @@ Car.prototype.get_top_speed = function () {
     return this.topSpeed;
 }
 
-var myCar = new Car('yellow', 54);
+const myCar = new Car('yellow', 54);
 
 console.log(myCar.get_color());
 
@@ -50,3 +46,4 @@ console.log(myCar.get_color());
 myCar.color = 'purple';
 console.log(myCar.color);
 console.log(myCar.get_color());
+console.log(myCar.get_top_speed());
