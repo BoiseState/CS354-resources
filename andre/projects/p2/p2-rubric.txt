@@ -1,4 +1,4 @@
-Grade: /80
+Grade: /70
 
 Rubric for Scheme project:
 
@@ -12,7 +12,7 @@ Overall Comments:
 
 
 Documentation:
-	-README.md: [10 points]
+	-README.md: [5 points]
 
 	-Appropriate and explanatory inline comments: [5 points]
 
@@ -20,7 +20,7 @@ Documentation:
 Visual Checks: 
 	- (super-duper) is implemented with a 'pure' subset of scheme (no loops, etc.). [5 points]
 
-    - A testing suite is provided in the submission, with more test cases than where provided. [10 points]
+    - A testing suite is provided in the submission, with more test cases than where provided. [5 points]
 
 	- Submission creates a copy of the input list, and doesn't modify the original. [10 pts]
 
@@ -36,7 +36,7 @@ Automated Checks:
 
 		-Results match on cases 6 - 8: [10 points]
 
-		-Results match on case 9:      [10 points] 
+		-Results match on case 9:      [10 points]
 
     - Submission includes additional test cases and they pass. [10 pts]
 	

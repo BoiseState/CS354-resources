@@ -1,25 +1,35 @@
-Grade: /30
+Grade: /70
 
-Rubric for LaTeX Proposal:
+Rubric for Javascript project:
 
 Overall Comments:
 
 
 -Submission
-
-    - A .tex file containing 
-    - Any relevant material used, such as images, templates etc.
+	
+	- store.js
+    - json-walker.js
+    - driver.js
+    - a README.md file that has been completed
 
 
 Documentation:
-	- Language Overview Proposal: [10 points]
+	-README.md: [5 points]
 
-	- Programming Project Proposal:
-		- Evaluation Plan		[5 points]
-		- Project Management Materials 	[5 points]
-
-	- Presentation Proposal [10 points]
+	-Appropriate and explanatory comments: [5 points]
 
 
-	-Lack of contribution from a team member can result in a penalty of up to a 100% in
-	 this project. This will be handled separately between the instructor and the team.
+Visual Checks:
+	- Each java class was ported to a Javascript module written using the modern class paradigm [5 points]
+
+    - walk() is implemented recursively (can use more than one function) [5 points]
+
+    - ESLint reports no errors or warnings on any of your JS files [15 points]
+
+	-Other comments: 
+
+
+Automated Checks:
+	-run-tests.sh completes successfully: [35 points]
+	
+    -Other comments:

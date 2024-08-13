@@ -1,9 +1,8 @@
-Grade: /80
+Grade: /70
 
 Rubric for Prolog project:
 
 Overall Comments:
-
 
 -Submission
 	
@@ -17,18 +16,18 @@ Documentation:
 	-Appropriate and explanatory comments: [5 points]
 
 
-Code design and style: 
+Visual Checks:
 	-  meetone.pl is implemented [10 points]
 	-  meet.pl is implemented    [10 points]
-	-  test.pl is updates with appropriate tests for the predicates [10 points]
+	-  test.pl is updates with appropriate tests for the predicates [5 points]
 
 	-Other comments: 
 
 
-Functionality:
+Automated Checks:
 	- Program executes without errors or warnings: [5 points]
 
-	- test.pl runs and passes each test: [10 points]
+	- test.pl runs and passes each test: [5 points]
 
 	- meetone.pl runs and produces the correct output for meeting time
 		8:30AM to 8:45AM [5 points]

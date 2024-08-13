@@ -1,4 +1,4 @@
-Grade: /80
+Grade: /70
 
 Rubric for Go project:
 
@@ -19,7 +19,7 @@ Documentation:
 Visual Checks:
 	- Go code is organized in packages correctly [10 points]
 
-	- Account.go has no implementation of Accrue [10 points]
+	- Account.go has no implementation of Accrue [5 points]
 
 	- goroutines and channel used to calculate interest [10 points]
 
@@ -27,7 +27,7 @@ Visual Checks:
 
 
 Automated Checks:
-	- run-test.sh output completes successfully [40 points]
+	- run-test.sh completes successfully [35 points]
 
 
 Extra Credit:
