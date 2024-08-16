@@ -1,0 +1,23 @@
+initial begin
+// $monitor("test: inp=%1d, out=%1d, ie=%b, oe=%b",inp,out,ie,oe);
+
+// $monitor($time," fact:   INP=%1d, OUT=%2d, IE=%b, mlt_oe=%b, ctr_done=%b",
+// INP,OUT,IE,mlt_oe,ctr_done);
+
+// $monitor("ctr: st=%1d,INP=%1d, OUT=%2d, CE=%b, IE=%b, OE=%b, INIT=%b, DONE=%b",
+//          f.ctr.state,f.ctr.INP,f.ctr.OUT,f.ctr.CE,f.ctr.IE,f.ctr.OE,f.ctr.INIT,f.ctr.DONE);
+
+      $monitor("mlt: st=%1d, A=%2d, B=%2d, a=%2d, b=%2d, IEA=%b, IEB=%b, Y=%2d, OE=%b\n",
+               f.mlt.state,
+	       f.mlt.A,f.mlt.B,
+	       f.mlt.a,f.mlt.b,
+	       f.mlt.IEA,f.mlt.IEB,
+	       f.mlt.Y,
+	       f.mlt.OE,
+               "ctr: st=%1d, INP=%2d, OUT=%2d, CE=%b, IE=%b, OE=%b, INIT=%b, DONE=%b\n",
+               f.ctr.state,
+	       f.ctr.INP,f.ctr.OUT,
+	       f.ctr.CE,f.ctr.IE,
+	       f.ctr.OE,f.ctr.INIT,f.ctr.DONE);
+
+end

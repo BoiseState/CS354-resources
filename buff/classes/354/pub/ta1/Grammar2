@@ -1,0 +1,30 @@
+prog     : block
+block    : stmt ';' block
+         | stmt
+stmt     : assn
+         | 'rd' id
+         | 'wr' expr
+         | 'if' boolexpr 'then' stmt
+         | 'if' boolexpr 'then' stmt 'else' stmt
+         | 'while' boolexpr 'do' stmt
+         | 'begin' block 'end'
+assn     : id '=' expr
+expr     : term addop expr
+         | term
+term     : fact mulop term
+         | fact
+fact     : id 
+         | num
+         | '(' expr ')'
+         | '-' fact
+boolexpr : expr relop expr
+addop    : '+'
+         | '-'
+mulop    : '*'
+         | '/'
+relop    : '<'
+         | '<='
+         | '>'
+         | '>='
+         | '<>'
+         | '=='

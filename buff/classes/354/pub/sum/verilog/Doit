@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -x
+
+iverilog -o sum -s sum sum.v -g 2012
+vvp -n sum

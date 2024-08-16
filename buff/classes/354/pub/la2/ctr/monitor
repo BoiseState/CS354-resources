@@ -1,0 +1,4 @@
+initial
+    $monitor("ctr: state=%1d, INP=%2d, OUT=%2d, CE=%b, IE=%b, OE=%b, INIT=%b, DONE=%b",
+        c.state, c.INP,c.OUT,c.CE,c.IE,c.OE,c.INIT,c.DONE);
+
