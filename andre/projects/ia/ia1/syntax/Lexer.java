@@ -17,7 +17,7 @@ public class Lexer {
 
 
     /**
-     * Creates a new scanner
+     * Creates a new lexical analyzer
      *
      * @param program - the program text to scan
      */
@@ -106,7 +106,7 @@ public class Lexer {
     }
 
     /**
-     * Determines if the current position of the scanner is in the bounds of the
+     * Determines if the current position of the lexer is in the bounds of the
      * program
      * @return true if there are more characters in program
      */

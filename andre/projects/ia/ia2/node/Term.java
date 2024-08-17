@@ -6,7 +6,7 @@ package node;
 public class Term extends Node {
 
 
-    public Term(Fact fact, NodeMulop mulop, Term term) {
+    public Term(Fact fact, Mulop mulop, Term term) {
 
     }
 
@@ -14,7 +14,7 @@ public class Term extends Node {
 
     }
 
-    public append(Term term) {
+    public void append(Term term) {
 
     }
 }

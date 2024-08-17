@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Test class for syntax.Scanner
+ * Test class for syntax.Lexer
  *
  * Uses Junit5.
  */
@@ -15,7 +15,7 @@ public class LexerTest {
      * Simply creates a 'program' that has only one token. When scanned,
      * the test checks to see that the current token is of the correct type.
      *
-     * Try more than one syntax.Token in a different test case!
+     * Try more than one Token in a different test case!
      * @throws SyntaxException - This suppresses the need for a try/catch block.
      */
     @Test
@@ -30,7 +30,7 @@ public class LexerTest {
 
 
     /**
-     * Tests that the scanner can recognize an identifier
+     * Tests that the lexer can recognize an identifier
      *
      * @throws SyntaxException
      */
@@ -46,7 +46,7 @@ public class LexerTest {
 
 
     /**
-     * Tests that the scanner can recognize an operator (the semicolon)
+     * Tests that the lexer can recognize an operator (the semicolon)
      * @throws SyntaxException
      */
     @Test

@@ -11,16 +11,16 @@ public class Parser {
     private Token lookahead;
 
     /**
-     * Parse an input program and return a node.Node that is the root of the
+     * Parse an input program and return a Node that is the root of the
      * resulting parse tree.
      *
      * @param program String to be scanned and parsed
-     * @return the Root node.Node of a parse tree
+     * @return the Root Node of a parse tree
      * @throws SyntaxException - If there is a syntax error
      */
     public Node parse(String program) throws SyntaxException {
-        scanner = new Lexer(program);
-        lookahead = scanner.next(); //"prime the pump"
+        lexer = new Lexer(program);
+        lookahead = lexer.next(); //"prime the pump"
         Expr expr = parseExpr();
         match("EOF");
         return expr;
@@ -78,19 +78,19 @@ public class Parser {
     }
 
     /**
-     * Parses an addop nonterminal and returns it.
-     * @return a node.Node that represent an addop
+     * Parses an Addop nonterminal and returns it.
+     * @return a Node that represent an addop
      * @throws SyntaxException if an invalid terminal is discovered
      */
-    private NodeAddop parseAddop() throws SyntaxException {
+    private Addop parseAddop() throws SyntaxException {
         Token addop = lookahead;
         if (addop.equalType("+")) {
             match("+");
-            return new NodeAddop(scanner.getPosition(), addop);
+            return new Addop(lexer.getPosition(), addop);
 
         } else if (addop.equalType("-")) {
             match("-");
-            return new NodeAddop(scanner.getPosition(), addop);
+            return new Addop(lexer.getPosition(), addop);
 
         } else {
             return null;
@@ -102,15 +102,15 @@ public class Parser {
      * @return
      * @throws SyntaxException
      */
-    private NodeMulop parseMulop() throws SyntaxException {
+    private Mulop parseMulop() throws SyntaxException {
 
     }
 
     private void match(String s) throws SyntaxException {
         if (lookahead.equalType(s)) {
-            lookahead = scanner.next();
+            lookahead = lexer.next();
         } else {
-            throw new SyntaxException(scanner.getPosition(), new Token(s), lookahead);
+            throw new SyntaxException(lexer.getPosition(), new Token(s), lookahead);
         }
     }
 }
