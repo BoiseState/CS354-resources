@@ -22,7 +22,7 @@ func main() {
 	fmt.Println(s2) //implements the Stringer interface, don't need to call String()
 
 	//var s3 shapes.Shaper = shapes.Triangle{1, 2, 3} //this is illegal!
-	// A Triangle doesn't fullfil the method set for shapes.Shaper
+	// A Triangle doesn't fulfill the method set for shapes.Shaper
 
 	//Uh, this definitely isn't a shape...
 	var s3 shapes.Shaper = optometry.NewEye()
