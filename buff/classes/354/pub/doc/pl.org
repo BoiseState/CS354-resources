@@ -61,6 +61,7 @@
 * [[https://en.wikipedia.org/wiki/Pascal_(programming_language)][Pascal]]
   [[https://www.freepascal.org/docs-html/current/ref/ref.html][freepascal HTML]]
   [[ftp://ftp.freepascal.org/pub/fpc/docs-pdf/ref.pdf][freepascal PDF]]
+  [[http://csweb.boisestate.edu/~buff/files/PascalRef.pdf][Pascal Reference Manual (PDF)]]
 * [[https://en.wikipedia.org/wiki/Prolog][Prolog]]
   [[http://www.gprolog.org/manual/gprolog.html][gprolog HTML]]
   [[http://www.gprolog.org/manual/gprolog.pdf][gprolog PDF]]
