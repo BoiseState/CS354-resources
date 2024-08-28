@@ -66,7 +66,7 @@ public class Parser {
 
         if (current.equalType(new Token("id"))) {
             match("id");
-            //TODO: return a new node.NodeFact Subclass for this case
+            //TODO: return a new node.Fact Subclass for this case
 
         } else if (current.equalType(new Token("num"))) {
 
