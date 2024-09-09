@@ -1,0 +1,42 @@
+                                                                /120
+
+
+
+Part 1
+
+    Exercise 1.1				  /15
+    Demonstrate errors.
+
+    Exercise 1.6				  /15
+    Consider traversals.
+
+    Exercise 1.8				  /15
+    Analyze Make.
+
+    Exercise 2.1				  /30
+    Write regular expressions.
+    (regular definitions are ok)
+    (grammars are not ok)
+
+    Exercise 2.13 a,b				  /10
+    Parse.
+
+    Exercise 2.17				  /15
+    Modify a context-free grammar.
+
+Part 2
+
+    Bank					  /10
+
+    Customer					  /5
+
+    Account					  /5
+
+    CheckingAccount				  /5
+
+    SavingAccount				  /5
+
+    Accrue					  /5
+
+    Fibonacci graph
+    
