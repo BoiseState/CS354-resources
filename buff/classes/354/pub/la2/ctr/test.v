@@ -22,7 +22,7 @@ module ctr#(BITS=8)();
 
    initial begin
       clk=1'b0;			// enabled
-      ie=1;
+      ie=1; ce=0;
       decr=0; inp=1; stop=9;
       //decr=0; inp=1; stop=1;
       //decr=0; inp=0; stop=0;
@@ -35,7 +35,7 @@ module ctr#(BITS=8)();
       ie=0;			// inputs latched during ie
       while (!done) begin
 	 ce=0;			// make oe true
-	 wait (oe || done);		// until output good
+	 wait (oe || done);	// until output good
 	 if (!done)
 	   $display("ctr(%1d,%1d,%1d)=%1d",inp,stop,decr,out);
 	 ce=1;			// make oe false

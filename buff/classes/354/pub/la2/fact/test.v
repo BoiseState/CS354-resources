@@ -25,7 +25,7 @@ module fact#(BITS=8)();
 	 #30;
 	 ie=0;			// input latched during ie
 	 wait (oe);		// until output good
-	 $display($time, " fact(%1d)=%1d",inp,out);
+	 $display("fact(%1d)=%1d",inp,out);
       end
      $stop;
    end
