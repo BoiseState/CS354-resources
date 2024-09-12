@@ -18,8 +18,8 @@ module mlt#(BITS=8)();
    initial begin
       clk=1'b0;			// enabled
       iea=0; ieb=0;
-      for (i=0; i<=6; i++) begin
-	 a=i; b=i;	        // provide input
+      for (i=3; i<=4; i++) begin
+	 a=i; b=i+2;	        // provide input
          #30 iea=1; ieb=1;	// an input is latched when its ie goes true
          #30 iea=0;		// one ie can then go false
 	 wait (oe);		// until output good
@@ -30,6 +30,6 @@ module mlt#(BITS=8)();
      $stop;
    end
 
-//`include "monitor"
+// `include "monitor"
 
 endmodule

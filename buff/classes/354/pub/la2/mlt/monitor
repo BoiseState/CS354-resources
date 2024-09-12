@@ -1,0 +1,7 @@
+initial
+    $monitor("%5t mlt: a=%2d, b=%2d, y=%2d, iea=%b, ieb=%b, oe=%b",
+        $time, a, b, y, iea, ieb, oe);
+
+//    $monitor("mlt: A=%2d, B=%2d, Y=%2d, OE=%b",
+//        m.A, m.B, m.Y, m.OE);
+
