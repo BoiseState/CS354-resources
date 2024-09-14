@@ -1,8 +1,4 @@
 //partial code snippet from CS321 P4.
-
-public class Action {
-
-
     private interface Action {
         void act(TreeObject obj);
     }
@@ -28,14 +24,10 @@ public class Action {
 
     private void traverse(Node x, Action action) throws IOException {
 
-        if (x == null) {
-            return;
-        }
-        for (int i = 0; i < x.n; i++) {
-            traverse(diskRead(x.children[i]), action);
-            action.act(x.keys[i]);
-        }
-        traverse(diskRead(x.children[x.n]), action);
-    }
+        ...
+        
+        traverse(diskRead(x.children[i]), action);
+        action.act(x.keys[i]);
 
-}
+        ...
+    }
