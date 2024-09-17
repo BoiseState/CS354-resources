@@ -23,11 +23,11 @@ module ctr#(BITS=8)();
    initial begin
       clk=1'b0;			// enabled
       ie=1; ce=0;
-      decr=0; inp=1; stop=9;
+      //decr=0; inp=1; stop=9;
       //decr=0; inp=1; stop=1;
       //decr=0; inp=0; stop=0;
       //decr=0; inp=1; stop=0;
-      //decr=1; inp=9; stop=1;
+      decr=1; inp=9; stop=1;
       //decr=1; inp=1; stop=1;
       //decr=1; inp=0; stop=0;
       //decr=1; inp=0; stop=1;
