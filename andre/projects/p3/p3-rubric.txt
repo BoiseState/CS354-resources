@@ -4,14 +4,12 @@ Rubric for Javascript project:
 
 Overall Comments:
 
-
 -Submission
 	
 	- store.js
     - json-walker.js
     - driver.js
     - a README.md file that has been completed
-
 
 Documentation:
 	-README.md: [5 points]

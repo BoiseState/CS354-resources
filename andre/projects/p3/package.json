@@ -1,0 +1,16 @@
+{
+  "name": "p3",
+  "version": "0.0.1",
+  "description": "",
+  "main": "driver.js",
+  "type": "module",
+  "scripts": {
+    "lint" : "./node_modules/.bin/eslint *.js"
+  },
+  "author": "",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
