@@ -140,3 +140,19 @@ x = (x, y) => {x * y};
 void 'something'; //returns undefined
 
 //bet practice, don't use void
+
+// semicolon insertion...
+
+const semi = function () {
+    return
+    {
+        // object return was intended.
+    }
+
+    // actually ends up :(
+    /*
+    return;
+    {
+    };
+     */
+}
