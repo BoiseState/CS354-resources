@@ -1,4 +1,5 @@
-block : stmt ';' block 'EOF'
+prog  : block 'EOF'
+block : stmt ';' block
       | stmt
 stmt  : assn
       | 'wr' expr
