@@ -1,8 +1,6 @@
-                                                                /130
+                                                                /40
 
 
-
-Part 1
 
     documentation                                   /5
 
@@ -16,35 +14,5 @@ Part 1
 
     environment                                     /10
       eval(),code()
-
-    test suite                                      /10
-
-Part 2
-
-    scanner changes                                 /5
-
-    parser changes
-
-        boolean expressions                         /5
-
-        if                                          /5
-
-        while                                       /5
-
-        blocks                                      /5
-
-        rd/wr                                       /5
-
-    eval()/code() changes
-
-        boolean expressions                         /10
-
-        if                                          /10
-
-        while                                       /10
-
-        blocks                                      /10
-
-        rd/wr                                       /10
 
     test suite                                      /10
