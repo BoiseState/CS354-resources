@@ -18,7 +18,7 @@ function handlgeThings(opts) {
     opts = opts || {};
 }
 
-// default paramters
+// default parameters
 var b = 1;
 function count( a = b++) {
     console.log(a)
