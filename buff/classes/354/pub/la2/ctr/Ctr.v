@@ -47,6 +47,7 @@ module Counter#(BITS=32, CLKS=3'd1)(
 	     else
 	       OE<=0;
 	     if (!CE) begin
+		cnt<=CLKS;
 		OUT<=(DECR ? OUT-one : OUT+one);
 		state<=StTEST;
 	     end

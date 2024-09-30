@@ -1,0 +1,36 @@
+This counter can count up or down, based on DECR.
+
+The first count value is INP.
+The last count value is STOP.
+
+To setup: Set IE(InputEnable) true,
+          CE(CountEnable) false,
+          DECR, INP, and STOP.
+          Wait until INIT is true.
+
+INIT stays true until CE is first true.
+
+To start: Set IE false, which latches INP into OUT, 
+          sets OE(OutputEnable) false,
+          and sets DONE false.
+
+Then:
+    while (!done) begin
+      ce=0;                  // make oe true
+      wait (oe || done);     // until output good
+      if (!done)
+        $display("ctr(%1d,%1d,%1d)=%1d",inp,stop,decr,out);
+      ce=1;                  // make oe false
+      wait (!oe);            // ready
+    end
+    wait (!oe);              // ready
+
+Each time CE goes true then false, OUT is updated, and OE
+goes true.  OE stays true until CE is next true.
+
+When STOP is reached: DONE goes true and OE false.
+
+DONE stays true until IE is again true.
+
+The CLKS parameter holds OE true for that many extra CLK
+cycles, or until IE is true.
