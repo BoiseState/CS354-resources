@@ -1,4 +1,5 @@
 // gcc -o frames frames.c -g -Wall && ./frames
+// gdb ./frames
 // GDB:
 //     break c
 //     run
