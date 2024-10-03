@@ -1,6 +1,7 @@
 package eval;
 
 import node.*;
+import syntax.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
