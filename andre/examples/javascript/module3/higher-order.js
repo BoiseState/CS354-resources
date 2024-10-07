@@ -11,5 +11,3 @@ const f2 = f1(variable); // f2 is the name of a function that was returned from 
 variable += 1; // variable is now 3
 
 f2(); //what gets printed?
-
-console.log(variable);
