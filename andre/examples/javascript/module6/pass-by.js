@@ -4,8 +4,8 @@ let obj = {
 };
 
 let f = function(x) {
-    //x.a = 456;
-    x = {}; //cannot change it to a different object
+    x.a = 456;
+    x = {}; //can change it to a different object, but it doesn't replace the actual.
 };
 
 console.log(obj.a); //123
@@ -24,4 +24,4 @@ console.log(prim); //1
 
 f(prim);
 
-console.log(prim); //2
+console.log(prim); //1
