@@ -28,25 +28,24 @@ different(A, B) :- \+(same(A,B)).
 move(A) :- good(A), empty(A), !.
 
 % strategy
- good(A) :- win(A).
- good(A) :- block_win(A).
- good(A) :- split(A).
- good(A) :- strong_build(A).
- good(A) :- weak_build(A).
+good(A) :- win(A).
+good(A) :- block_win(A).
+good(A) :- split(A).
+good(A) :- strong_build(A).
+good(A) :- weak_build(A).
 
- good(5).
- good(1).
- good(3).
- good(7).
- good(9).
- good(4).
- good(6).
- good(8).
+good(5).
+good(1).
+good(3).
+good(7).
+good(9).
+good(4).
+good(6).
+good(8).
 
- win(A) :- x(B), x(C), line(A,B,C).
- block_win(A) :- o(B), o(C), line(A,B,C).
- split(A) :- x(B), x(C), different(B,C), line(A,B,D), line(A,C,E), empty(D), empty(E).
-
+win(A) :- x(B), x(C), line(A,B,C).
+block_win(A) :- o(B), o(C), line(A,B,C).
+split(A) :- x(B), x(C), different(B,C), line(A,B,D), line(A,C,E), empty(D), empty(E).
 strong_build(A) :- x(B), line(A, B, C), empty(C), \+(risky(C)).
 weak_build(A) :- x(B), line(A, B, C), empty(C), \+(double_risky(C)).
 risky(C) :- o(D), line(C,D,E), empty(E).
