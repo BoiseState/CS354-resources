@@ -8,6 +8,8 @@
 //     print $sp
 //     print $fp
 //     print &i
+//     info args
+//     info locals
 
 void d() {}
 

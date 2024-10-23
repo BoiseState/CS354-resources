@@ -1,4 +1,4 @@
-// gcc -Wall -o blocks blocks.c && ./blocks
+// gcc -g -Wall -o blocks blocks.c && ./blocks
 
 #include <stdio.h>
 
