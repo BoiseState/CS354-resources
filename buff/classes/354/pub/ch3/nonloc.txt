@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void a() {
+  int i=123;
+  void b() {
+  401126:	55                   	push   %rbp
+  401127:	48 89 e5             	mov    %rsp,%rbp
+  40112a:	48 83 ec 20          	sub    $0x20,%rsp
+  40112e:	4c 89 d0             	mov    %r10,%rax
+  401131:	4c 89 55 e8          	mov    %r10,-0x18(%rbp)
+    int j=321;
+  401135:	c7 45 fc 41 01 00 00 	movl   $0x141,-0x4(%rbp)
+    printf("%d\n",i+j);
+  40113c:	8b 10                	mov    (%rax),%edx
+  40113e:	8b 45 fc             	mov    -0x4(%rbp),%eax
+  401141:	01 d0                	add    %edx,%eax
+  401143:	89 c6                	mov    %eax,%esi
+  401145:	bf 10 20 40 00       	mov    $0x402010,%edi
+  40114a:	b8 00 00 00 00       	mov    $0x0,%eax
+  40114f:	e8 dc fe ff ff       	call   401030 <printf@plt>
+  }
+  401154:	90                   	nop
+  401155:	c9                   	leave
+  401156:	c3                   	ret
+
+void a() {
+  401157:	55                   	push   %rbp
+  401158:	48 89 e5             	mov    %rsp,%rbp
+  40115b:	48 83 ec 10          	sub    $0x10,%rsp
+  40115f:	48 8d 45 10          	lea    0x10(%rbp),%rax
+  401163:	48 89 45 f8          	mov    %rax,-0x8(%rbp)
+  int i=123;
+  401167:	b8 7b 00 00 00       	mov    $0x7b,%eax
+  40116c:	89 45 f0             	mov    %eax,-0x10(%rbp)
+  b();
+  40116f:	48 8d 45 f0          	lea    -0x10(%rbp),%rax
+  401173:	49 89 c2             	mov    %rax,%r10
+  401176:	b8 00 00 00 00       	mov    $0x0,%eax
+  40117b:	e8 a6 ff ff ff       	call   401126 <b.0>
+}
+  401180:	90                   	nop
+  401181:	c9                   	leave
+  401182:	c3                   	ret

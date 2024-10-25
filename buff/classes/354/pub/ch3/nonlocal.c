@@ -5,11 +5,12 @@
 #include <stdio.h>
 
 void a() {
-  int i=123;
-  void b() {
-    int j=321;
-    printf("%d\n",i+j);
+  void c() {
+    void e() { printf("You are here!\n"); }
+    void d() { e(); }
+    d();
   }
+  void b() { c(); }
   b();
 }
 
