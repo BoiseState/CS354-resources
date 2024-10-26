@@ -1,26 +1,36 @@
-Grade: /100
+Grade: /120
 
 Rubric for team project:
 
 Overall Comments:
 
-Part 1: Presentation and Project Materials (65 points)
+
+Part 1&2: Project Proposal [20 points]
+
+- Proposal is written in LaTeX [10 points]
+
+- Proposal has all the required sections [10 points]
+
+- Each team member participated in creating the proposal
+
+
+Part 3: Presentation and Project Materials (65 points)
 
 -Submission
     - Completed project files
 	- Presentation materials (if you used powerpoint, or google slides, submit a PDF)
 
 Presentation Content:
-	- Content follows the P3 proposal [15 points]
+	- Content follows the project proposal [15 points]
 
-	- Project completed per P3 spec [50 points]
+	- Project completed per proposal spec [50 points]
 	    - Project completed [40 points]
-	    - Project evaluated per P3 spec [10 points]
+	    - Project evaluated with peers per spec [10 points]
 
 	- Other comments:
 
 
-Part 2: Demo hour (35 points)
+Part 4: Demo hour (35 points)
 
 - Each team member must be present on the day scheduled for their presentation.
 
@@ -39,4 +49,3 @@ Part 2: Demo hour (35 points)
 Lack of contribution from a team member can result in penalty of up
 to 100% in the project. This will be handled between the instructor
 and the team member in question. 
-
