@@ -1,0 +1,14 @@
+def sqrt(x) begin
+    def square(y) begin y = y * y end;
+    def abs(x) begin if x < 0 then x = -x else x = x end;
+    def goodEnough(guess) begin
+        if abs((square(guess) - x)) < 0.001 then
+            var y = 1.0 else var y = 0.0
+    end;
+    def improve(guess) begin var y = x / guess; y = (y + guess)/2 end;
+    def sqrtIter(guess) begin
+        if goodEnough(guess) == 1.0 then guess = guess else sqrtIter(improve(guess))
+    end;
+    sqrtIter(1.0)
+ end;
+ wr sqrt(10000)
