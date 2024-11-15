@@ -17,5 +17,4 @@ BEGIN {
     seq[5]=3
     seq[6]=7
     print sum(seq)
-print i
 }
