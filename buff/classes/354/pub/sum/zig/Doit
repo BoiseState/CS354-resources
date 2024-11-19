@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -x
+
+export PATH=/usr/bin:/bin
+
+#zig run sum.zig
+
+zig build-exe sum.zig
+./sum
