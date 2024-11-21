@@ -10,5 +10,5 @@ let c = function(x) {
     }
     b(x);
 }
-let x= 1;
+let x = 1;
 c(x);

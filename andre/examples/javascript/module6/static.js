@@ -5,7 +5,7 @@ let a = function(x) {
 let b = function(x) {
     let y = 2;
     a(x);
-    console.log(y); //prints 2
+    console.log(y);
 };
 
 b(1);
