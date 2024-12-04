@@ -10,6 +10,7 @@ type Square struct {
 // NewSquare function that creates a new square
 func NewSquare(x int) (s *Square) {
 	s = new(Square)
+	s.x = x
 	return
 	/*
 		alternatively:
