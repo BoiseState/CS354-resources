@@ -1,31 +1,57 @@
-module ard_fact#(BITS=8)(
-    input CLK,
-    input INIT,                              // active low
-    output reg TR_OE_1,  TR_OE_2,  TR_OE_3,  // EPT<->ARD bus enable (low)
-    output reg TR_DIR_1, TR_DIR_2, TR_DIR_3, // EPT<->ARD bus direction
-    inout [BITS-1:0]LB_IO,                   // EPT<->ARD bus
-    input reg ARD_RD, output reg ARD_WR,     // EPT<->ARD bus control (low)
-    output [2:0]LEDS[4:1]);
+module ard_fact#(BITS='d4, WORDS='d1)(
+    input CLK66, input INIT,
+    output BusEna[3:1],         // EPT<->ARD bus enable(low)
+    output BusDir[3:1],         // EPT<->ARD bus direction
+    inout [BITS-1:0]ARDbus,     // EPT<->ARD bus
+    input ARDrd, output ARDwr,  // EPT<->ARD bus ctl
+    input SWS[2:1], output [2:0]LEDS[4:1], output LA[15:0]);
 
-   wire [BITS-1:0]inp, // data read: ARD -> EPT
-                  out; // data writ: EPT -> ARD
-   wire ie, oe;        // input/output enable
+   wire ardInpEn, ardInpOk;
+   wire ardOutEn, ardOutOk;
+   wire [BITS-1:0]ardInp,    // word data read: ARD -> EPT
+                  ardOut;    // word data writ: EPT -> ARD
 
-   ard_io io(.CLK(CLK),
-             .INIT(INIT),                      // active low
-             .TR_OE_1(TR_OE_1),   .TR_OE_2(TR_OE_2),   .TR_OE_3(TR_OE_3),
-             .TR_DIR_1(TR_DIR_1), .TR_DIR_2(TR_DIR_2), .TR_DIR_3(TR_DIR_3),
-             .LB_IO(LB_IO),
-             .ARD_RD(ARD_RD), .ARD_WR(ARD_WR), // active low
-             .INP(inp),                        // input from ARD
-             .OUT(out),                        // output to ARD
-             .IE(ie),                          // for INP
-             .OE(oe),                          // for OUT
-	     .LEDS(LEDS));
+   wire [WORDS*BITS-1:0]inp, // aggregate data read: ARD -> EPT
+                        out; // aggregate data writ: EPT -> ARD
+   wire fn_ie, fn_oe;        // input/output enable
 
-   Factorial#(.BITS(BITS))
-        fact(.CLK(CLK),
-             .INP(inp), .IE(ie),
-             .OUT(out), .OE(oe));
+   reg  CLK; Clk#(.Div('d10)) clk(.Base(CLK66), .Gen(CLK));
+
+   wire [2:0]leds[3:1];
+   assign LEDS[3]=leds[3], LEDS[2]=leds[2], LEDS[1]=leds[1];
+
+   wire Init, Rd, Wr;
+   Sync sync_init(CLK,INIT,Init);
+   Sync sync_read(CLK,ARDrd,Rd);
+   assign ARDwr=Wr;
+
+   BiDiBus#(.BITS(BITS))
+         bus(.CLK, .INIT(Init),
+             .BusEna,                            // EPT<->ARD bus enable(low)
+             .BusDir,                            // EPT<->ARD bus direction
+             .ARDbus,                            // EPT<->ARD
+             .Rd, .Wr,                           // EPT<->ARD bus ctl
+             .OutEn(ardOutEn), .OutOk(ardOutOk), // EPT<--ARD bus output enable/ready
+             .InpEn(ardInpEn), .InpOk(ardInpOk), // EPT-->ARD bus input enable/ready
+             .Out(ardOut),                       // EPT<--ARD bus input/output
+             .Inp(ardInp),                       // EPT-->ARD bus input/output
+             .SWS, .LED(LEDS[4]), .LA);
+
+   ard_io#(.BITS(BITS), .WORDS(WORDS))
+          io(.CLK, .INIT(Init),
+             .ARDOutEn(ardOutEn), .ARDOutOk(ardOutOk), // EPT<--ARD bus output enable/ready
+             .ARDInpEn(ardInpEn), .ARDInpOk(ardInpOk), // EPT-->ARD bus input enable/ready
+             .ARDOut(ardOut),                          // word I/O from ARD
+             .ARDInp(ardInp),                          // word I/O to ARD
+             .Inp(inp),                                // aggregate input from ARD 
+             .Out(out),                                // aggregate output to ARD
+             .IE(fn_oe),
+             .OE(fn_ie),
+             .SWS, .LEDS(leds));
+
+   Factorial#(.BITS(BITS*WORDS))
+        fact(.CLK,
+             .INP(inp), .IE(fn_ie),
+             .OUT(out), .OE(fn_oe));
 
 endmodule

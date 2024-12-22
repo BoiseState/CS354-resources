@@ -22,12 +22,13 @@ module ctr#(BITS=8)();
 
    initial begin
       clk=1'b0;			// enabled
+      #10;
       ie=1; ce=0;
-      //decr=0; inp=1; stop=9;
+      decr=0; inp=1; stop=5;
       //decr=0; inp=1; stop=1;
       //decr=0; inp=0; stop=0;
       //decr=0; inp=1; stop=0;
-      decr=1; inp=9; stop=1;
+      //decr=1; inp=9; stop=1;
       //decr=1; inp=1; stop=1;
       //decr=1; inp=0; stop=0;
       //decr=1; inp=0; stop=1;
@@ -42,9 +43,12 @@ module ctr#(BITS=8)();
 	 wait (!oe);		// ready
       end
       wait (!oe);		// ready
+      #10;
       $stop;
    end
 
-// `include "monitor"
+//`include "monitor"
+// gtkwave test.fst &
+//`include "dump"
 
 endmodule

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+Tmpl="\
+initial begin
+    \$monitor(\"@CTRL\", @VARS);
+end"
+
+Out=${Inp%.*}.mon
+
+return
+
+# Variable Format [Nickname]
+
+CLK66 %1b clk

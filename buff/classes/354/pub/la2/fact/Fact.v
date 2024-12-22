@@ -1,4 +1,4 @@
-module Factorial#(BITS=32)(
+module Factorial#(BITS='d32)(
     input CLK,
     input      [BITS-1:0]INP, input      IE,
     output reg [BITS-1:0]OUT, output reg OE);
@@ -12,14 +12,14 @@ module Factorial#(BITS=32)(
    localparam one=BITS'(1);
 
    Multiplexer#(.BITS(BITS))
-       mux(.CLK(CLK),
+       mux(.CLK,
 	   .A(mlt_out), .B(one),
 	   .Y(OUT),
 	   .IE(ctr_oe), .OE(mux_oe),
 	   .SEL(ctr_init));	// 0->A, 1->B
 
    Counter#(.BITS(BITS))
-       ctr(.CLK(CLK),
+       ctr(.CLK,
 	   .INP(INP),     .IE(IE),
 	   .OUT(ctr_out), .OE(ctr_oe),
            .DECR(true),		// count down
@@ -28,7 +28,7 @@ module Factorial#(BITS=32)(
 	   .INIT(ctr_init), .DONE(OE));
 
    Multiplier#(.BITS(BITS))
-       mlt(.CLK(CLK),
+       mlt(.CLK,
 	   .A(OUT),      .B(ctr_out),
 	   .IEA(mux_oe), .IEB(ctr_oe),
 	   .Y(mlt_out),  .OE(mlt_oe));

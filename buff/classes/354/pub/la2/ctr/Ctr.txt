@@ -31,6 +31,3 @@ goes true.  OE stays true until CE is next true.
 When STOP is reached: DONE goes true and OE false.
 
 DONE stays true until IE is again true.
-
-The CLKS parameter holds OE true for that many extra CLK
-cycles, or until IE is true.

@@ -1,4 +1,4 @@
-module Multiplexer#(BITS=32)(
+module Multiplexer#(BITS='d32)(
     input CLK,
     input [BITS-1:0]A, B,
     output reg [BITS-1:0]Y,
