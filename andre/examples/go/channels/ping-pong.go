@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"sync"
 	"time"
 )
 
@@ -9,30 +11,45 @@ import (
 // go provides the programmer channels for the purpose of communication.
 
 func ping(ch chan int) {
-	var n int
-	for ok := true; ok; ok = n>0 {
-		n = <- ch
-		fmt.Printf("received ping: %d\n", n)
-		ch <- n - 1
+	for i := range ch {
+		fmt.Printf("received ping: %d\n", i)
+		if i > 0 {
+			time.Sleep(time.Duration(rand.Intn(100)) * time.Millisecond)
+			ch <- i - 1
+		} else {
+			close(ch)
+		}
 	}
 }
 
 func pong(ch chan int) {
-	var n int
-	for ok := true; ok; ok = n>0 {
-		n := <- ch
-		fmt.Printf("received pong: %d\n", n)
-		ch <- n - 1
+	for i := range ch {
+		fmt.Printf("\treceived pong: %d\n", i)
+		if i > 0 {
+			time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
+			ch <- i - 1
+		} else {
+			close(ch)
+		}
 	}
 }
 
 func main() {
-	ch := make(chan int)
+	ch := make(chan int,10)
+	var wg sync.WaitGroup
 
-	go ping(ch)
-	go pong(ch)
-	ch <- 10 //send a value to the channel
+	wg.Add(2)
 
-	time.Sleep(60 * time.Second)
+	go func() {
+		defer wg.Done()
+		ping(ch)
+	}()
+	go func() {
+		defer wg.Done()
+		pong(ch)
+	}()
+	ch <- 100 //send a value to the channel
+
+	wg.Wait()
 
 }
