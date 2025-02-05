@@ -6,7 +6,7 @@ module Counter#(BITS='d32)(
     output reg OE,
     input DECR,                 // 0: ++, 1:--
     input [BITS-1:0]STOP,       // OUT<=[INP..STOP] according to DECR
-    input CE,                  // strobe to count
+    input CE,                   // strobe to count
     output reg INIT, DONE);
 
    localparam one=BITS'(1);
