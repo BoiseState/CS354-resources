@@ -1,0 +1,17 @@
+                                                                     /50
+
+
+
+
+    Fib dataflow graph                                   /20
+
+    add.v                                                /5
+
+    add/test.v                                           /5
+
+    sto/test.v                                           /5
+
+    fib.v                                                /10
+
+    fib/test.v                                           /5
+
