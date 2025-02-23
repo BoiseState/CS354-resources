@@ -109,9 +109,13 @@ module BiDiBus#(BITS='d4)(
        StRD3: out<=Bus;		// data from ard
      endcase
 
-   assign  LA[8]=(dir==dirOut ? Inp[0] : Out[0]);
-   assign  LA[9]=(dir==dirOut ? Inp[1] : Out[1]);
-   assign LA[10]=(dir==dirOut ? Inp[2] : Out[2]);
-   assign LA[11]=(dir==dirOut ? Inp[3] : Out[3]);
+   assign LA[0]=1;
+   assign LA[1]=CLK;
+   assign LA[2]=Rd;
+   assign LA[3]=Wr;
+   assign LA[4]=(dir==dirOut ? Inp[0] : Out[0]);
+   assign LA[5]=(dir==dirOut ? Inp[1] : Out[1]);
+   assign LA[6]=(dir==dirOut ? Inp[2] : Out[2]);
+   assign LA[7]=(dir==dirOut ? Inp[3] : Out[3]);
 
 endmodule

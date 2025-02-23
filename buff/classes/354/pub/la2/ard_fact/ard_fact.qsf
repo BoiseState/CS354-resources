@@ -79,6 +79,15 @@ set_location_assignment PIN_27 -to SWS[2]
 
 
 
+set_location_assignment PIN_83 -to LA[0]
+set_location_assignment PIN_81 -to LA[1]
+set_location_assignment PIN_77 -to LA[2]
+set_location_assignment PIN_58 -to LA[3]
+set_location_assignment PIN_76 -to LA[4]
+set_location_assignment PIN_78 -to LA[5]
+set_location_assignment PIN_82 -to LA[6]
+set_location_assignment PIN_84 -to LA[7]
+
 
 
 
