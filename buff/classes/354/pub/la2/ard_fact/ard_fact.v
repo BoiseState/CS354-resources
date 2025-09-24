@@ -15,8 +15,7 @@ module ard_fact#(BITS='d4, WORDS='d1)(
                         out; // aggregate data writ: EPT -> ARD
    wire fn_ie, fn_oe;        // input/output enable
 
-   // divide_by 10 => 150ns period => 6.6MHz
-   reg CLK; Clk#(.Div('d4)) clk(.Base(CLK66), .Gen(CLK)); // 6.6MHz (24 bits)
+   wire CLK=CLK66;
 
    wire [2:0]leds[3:1];
    assign LEDS[3]=leds[3], LEDS[2]=leds[2], LEDS[1]=leds[1];

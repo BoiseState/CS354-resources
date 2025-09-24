@@ -1,0 +1,23 @@
+								 /80
+
+
+
+
+Regular definition for string literals:
+    abbreviate charsets and ranges                   /5
+    allow future prohibition of chars like "\X"      /5
+    allow three-digit octal numbers                  /5
+    string literals                                  /5
+
+Parsing:
+    two trees                                        /10
+    two derivations                                  /10
+
+Grammars:
+    two grammars                                     /10
+    two trees                                        /10
+
+Toolchains:
+    out-of-order symptoms                            /5
+    dependencies                                     /5
+    make's limitations                               /10

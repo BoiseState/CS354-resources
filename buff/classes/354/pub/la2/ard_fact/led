@@ -1,0 +1,13 @@
+// -*-C-*-
+
+localparam bit [2:0]lOFF='b111;
+localparam bit [2:0]lRED='b011;
+localparam bit [2:0]lGRN='b101;
+localparam bit [2:0]lBLU='b110;
+localparam bit [2:0]lWHT='b000;
+
+`define MIX(A,B) (~(~A|~B))
+
+localparam bit [2:0]lYEL=`MIX(lRED,lGRN);
+localparam bit [2:0]lMAG=`MIX(lRED,lBLU);
+localparam bit [2:0]lCYA=`MIX(lBLU,lGRN);

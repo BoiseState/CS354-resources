@@ -29,7 +29,7 @@ module Counter#(BITS='d32)(
         curr<=next;
      end
 
-   always @* begin #2;
+   always @* begin
       next=curr;
       case (curr)
         StTST: if (|DECR            // 0: Are we done?
