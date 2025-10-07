@@ -8,7 +8,7 @@ int main() {
     int a[1000];
     a[500]=a[501]=123;
     printf("&a[0]    =%p\n",&a[0]);
-    printf("sizeof(a)=%lu\n",sizeof(a));
+    printf("sizeof(a)=%lu\n",sizeof(a)); // %lx
   }
   // do some stuff
   {
