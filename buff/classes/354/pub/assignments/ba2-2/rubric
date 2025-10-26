@@ -1,0 +1,26 @@
+								 /80
+
+
+
+
+Memory allocation:
+    pros and cons				     /5
+    default					     /5
+    lifetime					     /5
+    deallocation				     /5
+    return value				     /5
+
+Early or late binding in Java:
+    code                                             /10
+    demo                                             /5
+
+Stack frames:
+    static links                                     /10
+    displays                                         /10
+
+Scope and binding:
+    static scope and early binding                   /5
+    static scope and late binding                    /5
+    dynamic scope and early binding                  /5
+    dynamic scope and late binding                   /5
+
