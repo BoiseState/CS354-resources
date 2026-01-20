@@ -3,11 +3,13 @@ package node;
 import java.lang.reflect.Field;
 
 /**
- * TODO:
+ *
  */
 public abstract class Node {
 
     protected int position = 0;
+
+    protected static int indent = 0;
 
     /**
      * From <a href="http://www.javapractices.com/topic/TopicAction.do?Id=55">...</a>
@@ -18,24 +20,27 @@ public abstract class Node {
         StringBuilder result = new StringBuilder();
 
         result.append(this.getClass().getName());
-        result.append(" (");
 
         //determine fields declared in this class only (no fields of superclass)
         Field[] fields = this.getClass().getDeclaredFields();
 
         //print field names paired with their values
         for (Field field : fields) {
-            result.append(" ");
+            result.append("\n");
+            indent++;
+            for (int i = 0; i < indent; i++) {
+                result.append("──");
+            }
             try {
-                result.append(field.getName());
+                result.append(" " + field.getName());
                 result.append(": ");
                 //requires access to private field:
                 result.append(field.get(this));
             } catch (IllegalAccessException ex) {
                 System.out.println(ex);
             }
+            indent--;
         }
-        result.append(" )");
 
         return result.toString();
     }
