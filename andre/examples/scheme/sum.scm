@@ -3,6 +3,23 @@
     0
     (+ (car seq) (sum (cdr seq)))))
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (define (build-list n)
   (if (= n 0)
     '()
