@@ -4,19 +4,19 @@ import "fmt"
 
 var a int
 
-func first() {
-	a = 1
+func modify() {
+	a = 2
 }
 
-func second() {
+func initialize() {
 	var a int
 	dummy(a) //can't compile without using a
-	first()
+	modify()
 }
 
 func main() {
-	a = 2
-	second()
+	a = 1
+	initialize()
 	fmt.Println(a)
 }
 

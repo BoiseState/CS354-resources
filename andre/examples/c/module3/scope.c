@@ -2,20 +2,20 @@
 
 int a;
 
-void first() {
-    a = 1;
+void modify() {
+    a = 2;
 }
 
-void second() {
+void init() {
 
     int a;
-    first();
+    modify();
 }
 
 int main() {
 
-    a = 2;
-    second();
+    a = 1;
+    init();
     printf("%d\n", a);
 
     return 0;
