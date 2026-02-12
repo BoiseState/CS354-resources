@@ -1,0 +1,16 @@
+var a;
+
+var notUsed = 0;
+
+def modify(notUsed) begin
+    a = 2
+end;
+
+def init(notUsed) begin
+    var a;
+    modify(notUsed)
+end;
+
+a = 1;
+init(notUsed);
+wr a
