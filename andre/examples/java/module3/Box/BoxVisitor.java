@@ -1,10 +1,8 @@
-class BoxVisitor<U, R>{
+class BoxVisitor<U>{
 
-    public R visit(Box<? extends U> host) {
-        // ...
-    }
+    public void visit(Box<? extends U> host) {}
 }
 
-class Herbavore<R> extends BoxVisitor<Plant, R> {}
+class Herbivore extends BoxVisitor<Plant> {}
 
-class Panda<R> extends BoxVisitor<Bamboo, R> {}
+class Panda extends BoxVisitor<Bamboo> {}

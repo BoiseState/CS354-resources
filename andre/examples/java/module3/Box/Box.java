@@ -2,7 +2,5 @@
 
 class Box<T> {
 
-    public <R> R accept(BoxVisitor<? super T, R> visitor) {
-        // ...
-    }
+    public void accept(BoxVisitor<? super T> visitor) {}
 }
