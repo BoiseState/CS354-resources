@@ -1,10 +1,4 @@
-class Fuel {
-
-    private boolean consumed;
-    public Fuel() {
-        consumed = true;
-    }
-}
+class Fuel {}
 
 class Plant extends Fuel {}
 

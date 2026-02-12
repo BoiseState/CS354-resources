@@ -2,8 +2,8 @@ public class Main {
 
     public static void main(String[] args) {
         BoxVisitor<Fuel> fuelConsumer = new BoxVisitor<>();
-        Herbivore herbivore = new Herbivore();
-        Panda panda = new Panda();
+        BoxVisitor<Plant> herbivore = new BoxVisitor<>();
+        BoxVisitor<Bamboo> panda = new BoxVisitor<>();
 
         Box<Fuel> fuelBox = new Box<>();
         Box<Plant> plantBox = new Box<>();
@@ -34,8 +34,8 @@ public class Main {
         // fuelBox can only be visited by fuelConsumer
 
         fuelBox.accept(fuelConsumer);
-        //fuelBox.accept(herbivore); // illegal
-        //fuelBox.accept(panda); // illegal
+        // fuelBox.accept(herbivore); // illegal
+        // fuelBox.accept(panda); // illegal
 
 
         // plantBox can be visited by fuelConsumer and herbivore
