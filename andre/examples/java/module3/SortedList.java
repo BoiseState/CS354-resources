@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class SortedList<T extends Comparable<T>> {
@@ -16,6 +18,26 @@ public class SortedList<T extends Comparable<T>> {
             }
             sortedList.add(i, num);
         }
+    }
+
+    private static void addRandoms(SortedList<Integer> list) {
+
+        for (int i = 0; i < 10000; i++) {
+            list.add((int)(Math.random()*10000));
+        }
+    }
+
+    public static void main(String[] args) {
+        SortedList<Integer> a = new SortedList<>(new ArrayList<Integer>());
+        SortedList<Integer> l = new SortedList<>(new LinkedList<Integer>());
+
+        long start = System.currentTimeMillis();
+        addRandoms(a);
+        System.out.println("ArrayList time = " + (System.currentTimeMillis() - start));
+
+        start = System.currentTimeMillis();
+        addRandoms(l);
+        System.out.println("LinkedList time = " + (System.currentTimeMillis() - start));
     }
 }
 
