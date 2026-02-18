@@ -1,0 +1,17 @@
+{
+  "name": "p3",
+  "version": "0.0.1",
+  "description": "",
+  "main": "cli.js",
+  "type": "module",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint *.js",
+    "lint-fix": "./node_modules/.bin/eslint *.js --fix"
+  },
+  "author": "",
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "latest"
+  }
+}

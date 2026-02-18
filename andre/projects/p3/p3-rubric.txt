@@ -5,29 +5,49 @@ Rubric for Javascript project:
 Overall Comments:
 
 -Submission
-	
-	- store.js
-    - json-walker.js
-    - driver.js
+
+	- part1/
+	- part2/
+	- part3/
     - a README.md file that has been completed
 
 Documentation:
-	-README.md: [5 points]
+	-README.md:
+        -Reflection for Part 0 AI assisted code review [5 points]
 
-	-Appropriate and explanatory comments: [5 points]
+        -Reflection for Part 1 AI code port [5 points]
+
+        -Reflection for Part 2 Functional Closure Refactor [5 points]
+
+        -Reflection for Part 3 AI Assisted DB [5 points]
 
 
 Visual Checks:
-	- Each java class was ported to a Javascript module written using the modern class paradigm [5 points]
+	- part1 [10 points]
+	    - ES6+ class syntax is used
+	    - Store's map is a private variable. walk() is implemented in json-walker.js
+	    - ESlint shows no errors or warnings
 
-    - walk() is implemented recursively (can use more than one function) [5 points]
+    - part2 [10 points]
+        - store and json-walker use functional closures
+        - no ES6 class syntax is used
+        - No global state is modified
+	    - ESlint shows no errors or warnings
 
-    - ESLint reports no errors or warnings on any of your JS files [15 points]
+    - part3 [15 points]
+        - json-walker uses async/await to read from the filesystem
+        - store now uses sqlite package and a backing database
+        - json-walker is updated to use addToStore with callback functions
+	    - ESlint shows no errors or warnings
 
 	-Other comments: 
 
 
 Automated Checks:
-	-run-tests.sh completes successfully: [35 points]
-	
+	-run-tests.sh completes successfully in part1/: [5 points]
+
+	-run-tests.sh completes successfully in part2/: [5 points]
+
+	-run-tests.sh completes successfully in part3/: [5 points]
+
     -Other comments:
