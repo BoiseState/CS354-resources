@@ -1,35 +1,29 @@
-const sleep = require("./sleep");
+// callback functions are a typical way of handling asynchronous events
+// note the => syntax is shorthand for a lambda function.
+// (millis, callback) => { ... }
+//   is the same as
+// function(millis, callback) { ... }
 
-let doSomething = (async function (millis, callback) {
-    await sleep(millis);
-    callback();
-});
+let doSomething =  (millis, callback) => {
+    setTimeout(callback, millis)
+};
 
-doSomething(1000, function() {
+doSomething(1000, () => {
     console.log('2');
 });
 
-console.log('1!');
+console.log('1');
 
 
 
 //chaining callbacks as you might need to do when writing to multiple database tables or something
-//yuck!
-doSomething(1000, function() {
+doSomething(1000, () => {
     console.log('a');
-
-    if (true) {
-
-        doSomething(500, function() {
-            console.log('b');
-            if (false) {
-
-            } else {
-                doSomething(250, function() {
-                    console.log('c');
-                });
-            }
+    doSomething(500, () => {
+        console.log('b');
+        doSomething(250, () => {
+            console.log('c');
         });
-    }
+    });
 });
 

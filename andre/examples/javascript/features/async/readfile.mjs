@@ -1,4 +1,6 @@
-import fs from "fs";
+// mjs extension causes ecmascript module style, instead of commonjs require
+import fs from 'fs';
+import { readFile } from 'fs/promises';
 
 if (process.argv.length !== 3) {
     console.log(`Usage: ${process.argv[1]} <file>`);
@@ -10,3 +12,7 @@ fs.readFile(process.argv[2], 'utf8', (err, data) => {
     if (err) throw err;
     console.log(data);
 });
+
+
+// a promise library is also available
+await readFile(process.argv[2], 'utf-8');

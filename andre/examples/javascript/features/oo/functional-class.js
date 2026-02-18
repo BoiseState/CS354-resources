@@ -3,16 +3,16 @@
 const myClass = (function (a , b) {
 
     //Private instance variable
-    let c = a + b;
+    const c = a + b;
 
-    let printAdd = function() {
+    const printAdd = function() {
         console.log(a + b)
     }
 
     //return public members
     //this is using the object literal '{}' to create a new object, but Object.create or using 'new' works too
     return {
-        printAdd: printAdd
+        printAdd,
     };
 
 });

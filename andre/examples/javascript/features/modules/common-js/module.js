@@ -1,6 +1,6 @@
 
 //define a simple functional class
-let obj = (function () {
+const adder = (function () {
     let a = 1;
     let b = 2;
 
@@ -9,11 +9,11 @@ let obj = (function () {
     };
 
     return {
-        add: add
+        add,
     };
 });
 
 /*
 export it! This is from CommonJS, the module framework used for many years
 */
-module.exports = obj;
+module.exports = adder;

@@ -1,4 +1,3 @@
-
 import {hello, MyObject, obj} from './module.js'
 
 hello()

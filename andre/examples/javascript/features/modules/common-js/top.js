@@ -1,3 +1,5 @@
-const obj = require('./module.js')(); //execute the function! 
+const adder = require('./module.js');
 
-console.log(obj.add());
+const myAdder = adder();
+
+console.log(myAdder.add());
