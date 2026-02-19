@@ -54,7 +54,7 @@ const otherVehicle = Vehicle('purple');
 console.log(this.color); //undefined?
 
 // Inheritance
-var Car = function (color, topSpeed) {
+const Car = function (color, topSpeed) {
     this.color = color;
     this.topSpeed = topSpeed;
 }
