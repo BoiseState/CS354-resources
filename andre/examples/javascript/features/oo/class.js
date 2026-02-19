@@ -1,22 +1,33 @@
 // Newer versions of JS added more syntax to hide the prototypal object model.
-// keywords look just like java, but behave differently under the hood
+// keywords look like java, but behave differently under the hood
+// get and set are especially different from Java
 class Vehicle {
+    #color;
+    #started;
+
     constructor(color) {
-        this.vColor = color;
+        this.#color = color;
+        this.#started = false;
     }
 
-    // get vColor() { return this.vColor } //trap! Infinite recursion
     get color() {
-        return this.vColor;
+        return this.#color;
     }
 
-    method() {
-        console.log("I am here!");
+    set color(color) {
+        this.#color = color;
     }
 
-    #privateMethod () {
-        console.log("privacy :) ");
 
+    rev() {
+        if (!this.#started) {
+            this.#start()
+        }
+        console.log("vrooom");
+    }
+
+    #start () {
+        this.#started = true;
     }
 }
 
@@ -34,10 +45,17 @@ const Vehicle3 = class Vehicle4 {
     }
 }
 
+const myCar = new Vehicle('brown');
+myCar.rev();
+// getters and setters look like they are directly modifying the private variable
+myCar.color = 'blue';
+console.log(`color of myCar is ${myCar.color}`);
+
+
 //inheritance that is fooling you to look like Java
-class Bus extends Vehicle {
+class Bus extends Vehicle {}
 
-}
-
-const myBus = new Bus();
+const myBus = new Bus('yellow');
 //myBus.prototype is Vehicle
+
+myBus.rev();
