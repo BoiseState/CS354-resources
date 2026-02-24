@@ -14,7 +14,7 @@ if (0 == '0') {
 
 const item = new Object(); // use object literal instead
 
-function handlgeThings(opts) {
+function handleThings(opts) {
     opts = opts || {};
 }
 
