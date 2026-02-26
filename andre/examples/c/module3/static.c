@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void f(void) {
-    static int a = 0; // automatically allocated variable on the stack
+    static int a = 0;
     printf("a = %d\n", a);
-    printf("&a = %p\n", &a);
+    //printf("&a = %p\n", &a); // where does it live?
 
     a++;
 }

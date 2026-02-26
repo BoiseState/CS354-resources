@@ -1,17 +1,17 @@
 
 //corresponds to figure 3.5 in PLP IV
 
-let a = function () {
+const a = function () {
     let x = 1;
 
-    let b = function () {
+    const b = function () {
         let x = 2;
 
-        let c = function () {
+        const c = function () {
             console.log("in c: x = " + x);
 
         }
-        let d = function () {
+        const d = function () {
             let x = 3;
             c();
         }
@@ -19,11 +19,10 @@ let a = function () {
         d();
     }
 
-    let e = function () {
+    const e = function () {
         console.log("in e: x = " + x);
         b();
     }
     e();
 }
-
 a();
