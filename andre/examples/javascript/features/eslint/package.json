@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint" : "./node_modules/.bin/eslint *.js",
-    "lint:fix" : "./node_modules/.bin/eslint *.js",
+    "lint:fix" : "./node_modules/.bin/eslint *.js --fix",
     "run"  : "node app.js"
   },
   "devDependencies": {

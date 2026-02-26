@@ -156,3 +156,14 @@ const semi = function () {
     };
      */
 }
+
+const bool = true;
+
+const obj_demo = {
+    'first-name': undefined,
+    first_name: undefined, // quotes are optional if using a legal identifier
+    '': 'wat', // empty string is a valid identifier!!!
+    true: true, // hmm. reserved words are okay
+    // illegal `${bool}`: false // values for names must be known at compile time
+
+}
