@@ -4,6 +4,9 @@ public class DogCat {
         Cat c = new Cat();
         Dog d = new Dog();
         c.equals(d);
+
+        Cat c2 = new Cat();
+        c.equals(c2); // which one should be used?
     }
 }
 
