@@ -4,7 +4,7 @@ const parent = {
         return this.value + 1;
     },
     getValue() {
-        return value;
+        return this.value;
     },
 };
 

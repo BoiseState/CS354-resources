@@ -1,6 +1,8 @@
 
 const f1 = function (a) {
-    return function () { console.log(a); }
+    return function () {
+        console.log(a);
+    }
 }
 
 let variable = 2;
@@ -11,4 +13,5 @@ f2();
 
 variable += 1;
 
+// what do we want f2 to print now?
 f2();

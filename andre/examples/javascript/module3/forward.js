@@ -1,4 +1,5 @@
-var a = c; var c = 4; //legal but a is undefined
+var a = c;
+var c = 4;
 
-var b= f(); //legal forward reference
+var b= f();
 function f() { return 2; }

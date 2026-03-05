@@ -1,12 +1,11 @@
 public class Forward {
 
-    //private int a = b; // illegal
+    private int a = b;
     private int b = 4;
 
-    void A() { B(); } //Not illegal
+    void A() { B(); }
 
-    void B() { int b = c; } //fine here though
+    void B() { int b = c; }
 
-    private int c = 3; //ick
-
+    private int c = 3;
 }
