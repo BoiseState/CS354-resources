@@ -433,7 +433,7 @@ class cpu:
             return targ, 'TYPE_LABEL'
         elif tmp[0].isalpha() and not tmp[0].isdigit():
             # this is a VARIABLE
-            zassert(tmp in self.vars, 'Variable %s is not declared' % tmp)
+            zassert(tmp in self.vars, 'Printer %s is not declared' % tmp)
             return '%d,%d,%d,1' % (self.vars[tmp], self.register_translate('zero'), self.register_translate('zero')), 'TYPE_MEMORY'
         elif tmp[0].isdigit() or tmp[0] == '-' or tmp[0] == '(':
             # MOST GENERAL CASE: number(reg,reg) or number(reg) or number(reg,reg,number)

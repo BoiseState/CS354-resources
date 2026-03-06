@@ -1,6 +1,6 @@
 // Can variable names be overloaded in Java?
 
-class Variable {
+class Printer {
     int a = 4;
 
     void print() {
@@ -8,13 +8,13 @@ class Variable {
     }
 }
 
-class Override extends Variable {
+class DoublePrinter extends Printer {
     double a = 3.14;
 }
 
 class Main {
     public static void main(String[] args) {
-        Override o = new Override();
+        DoublePrinter o = new DoublePrinter();
         o.print(); // what should print?
     }
 }

@@ -387,7 +387,7 @@ class cpu:
             targ = tmp
             return targ, 'TYPE_LABEL'
         elif tmp[0].isalpha() and not tmp[0].isdigit():
-            zassert(tmp in self.vars, 'Variable %s is not declared' % tmp)
+            zassert(tmp in self.vars, 'Printer %s is not declared' % tmp)
             # print '%d,%d,%d' % (self.vars[tmp], self.register_translate('zero'), self.register_translate('zero')), 'TYPE_MEMORY'
             return '%d,%d,%d' % (self.vars[tmp], self.register_translate('zero'), self.register_translate('zero')), 'TYPE_MEMORY'
         elif tmp[0].isdigit() or tmp[0] == '-':
