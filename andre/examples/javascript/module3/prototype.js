@@ -16,3 +16,4 @@ const child = {
 };
 
 // open in node.js and play with attributes of child and parent
+// can we modify child.value?

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BoundedGenerics {
 
-    static  void printList(List<? extends Number> list) {
+    static <T extends Number> void printList(List<T> list) {
         for (Number n : list) {
             System.out.println(n.doubleValue());
         }
@@ -27,7 +27,7 @@ public class BoundedGenerics {
         printList(doubleList);
 
         addToList(intList); //fine
-        addToList(doubleList); //illegal
+        //addToList(doubleList); //illegal
 
         // superclass Number of Integer works too
         List<Number> mixedList = new ArrayList<>();

@@ -10,6 +10,9 @@ class Printer {
 
 class DoublePrinter extends Printer {
     double a = 3.14;
+//    void print() {
+//        System.out.println(super.a);
+//    }
 }
 
 class Main {

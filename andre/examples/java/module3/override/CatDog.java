@@ -11,7 +11,7 @@ class Dog {
     // dog stuff
 }
 
-public class DogCat {
+class CatDog {
 
     public static void main(String[] args) {
         Cat c = new Cat();
