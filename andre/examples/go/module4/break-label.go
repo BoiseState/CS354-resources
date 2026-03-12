@@ -1,21 +1,49 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
-func loopAndSwitch(i int) {
-	loop:
-	for ; i < 5; i++ {
-		switch i {
-			case 0: fmt.Println(i)
-			case 1: fmt.Println(i)
-			case 2: fmt.Println(i)
-			case 3: fmt.Println(i)
-			case 4: fmt.Println("breaking out of the loop!"); break loop
-			default: break
-		}
+// report the first occurrence of 1 in slice
+func report(slice [][]int) {
+	outer:
+	for i := 0; i < len(slice); i++ {
+			for j := 0; j < len(slice[i]); j++ {
+				if slice[i][j] == 1 {
+					fmt.Printf("1 found at [%d][%d]\n", i, j)
+					continue outer
+				}
+				continue // redundant but demonstrates flow moving to either loop
+			}
 	}
 }
 
 func main() {
-	loopAndSwitch(0);
+	// init 2d slice
+	slice := makeSlice(5)
+	populateSlice(slice)
+
+	report(slice)
+}
+
+func makeSlice(n int) [][]int {
+	slice := make([][]int, n)
+	for i, _ := range slice {
+		slice[i] = make([]int, n)
+	}
+	return slice
+}
+
+func populateSlice(slice[][]int) {
+
+	for i, _ := range slice {
+		for j, _ := range slice[i] {
+			if rand.Int() % 2 == 0 {
+				slice[i][j] = 0
+			} else {
+				slice[i][j] = 1
+			}
+		}
+	}
 }
