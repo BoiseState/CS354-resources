@@ -1,3 +1,5 @@
+% Usage: gprolog --consult-file tictactoe.pl
+% enter a move when prompted according to the cell number on a tictactoe grid, terminated with a period.
 
 ordered_line(1,2,3).
 ordered_line(4,5,6).
