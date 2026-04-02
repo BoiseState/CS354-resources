@@ -5,7 +5,7 @@ import (
 	"math/rand"
 )
 
-// report the first occurrence of 1 in slice
+// report the first occurrence of 1 in each slice
 func report(slice [][]int) {
 	outer:
 	for i := 0; i < len(slice); i++ {
