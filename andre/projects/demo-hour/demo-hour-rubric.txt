@@ -35,6 +35,8 @@ Part 4: Demo hour (35 points)
 - Each team member must be present on the day scheduled for their presentation.
 
 - Each team member must participate in their presentation.
+    - Each presenter uses clear and understandable language.
+    - Each presenter uses professional conduct expected for our field.
 
 - Presentation covers the following:
 	- Programming language in the terminology used in the class. 

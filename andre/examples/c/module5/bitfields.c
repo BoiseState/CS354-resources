@@ -19,8 +19,8 @@ int main(void) {
     value.bits.sign^=1;			//access the sign field of it
     printf("value.d: %g\n",value.d);
 
-    value.d=-3.012;
-    printf("value.bits.sign: %x, value.bits.exponent: %x, value.bits.fraction: %lx\n",
+
+    printf("value.bits.sign: %d, value.bits.exponent: %d, value.bits.fraction: %ld\n",
                                value.bits.sign, value.bits.exponent, value.bits.fraction); // print the components of it
 
     return 0;
