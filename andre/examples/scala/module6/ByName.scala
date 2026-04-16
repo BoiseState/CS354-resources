@@ -1,4 +1,4 @@
-// scalac ByName.scala && scala ByName
+// scala run ByName.scala
 
 object ByName {
 
