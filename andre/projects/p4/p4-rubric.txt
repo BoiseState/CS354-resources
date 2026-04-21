@@ -19,7 +19,7 @@ Documentation:
 Visual Checks:
 	-  meetone.pl is implemented [10 points]
 	-  meet.pl is implemented    [10 points]
-	-  test.pl is updates with appropriate tests for the predicates [5 points]
+	-  test.pl is updated with appropriate tests for the predicates [5 points]
 
 	-Other comments: 
 

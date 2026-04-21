@@ -23,9 +23,9 @@ Part 3: Presentation and Project Materials (65 points)
 Presentation Content:
 	- Content follows the project proposal [15 points]
 
-	- Project completed per proposal spec [50 points]
+	- Project completed per proposal spec
 	    - Project completed [40 points]
-	    - Project evaluated with peers per spec [10 points]
+	    - Project evaluated per spec [10 points]
 
 	- Other comments:
 
