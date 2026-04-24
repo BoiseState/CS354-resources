@@ -1,7 +1,7 @@
 // credit: Javascript: the Good Parts
 
 // memoized fibonacci function.
-// memoization remembers the result of previous function calls, saving time
+// memoization caches the result of previous function calls, saving time
 const fibonacci = function () {
     let memo = [0, 1];
     const fib = function (n) {
@@ -12,5 +12,11 @@ const fibonacci = function () {
         }
         return result;
     };
-    return fib;
+    const print_memo = function() {
+        console.log(memo);
+    }
+    return {
+        fib,
+        print_memo,
+    };
 }();
