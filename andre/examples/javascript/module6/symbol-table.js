@@ -8,10 +8,10 @@ let fib = function (n) {
 };
 
 const memoize = function(fn) {
-    let cache = {};
+    let cache = Object.create(null);
     return function(...args) {
         const key = args.join('');
-        if (!cache.has(key)) {
+        if (cache[key] === undefined) {
             cache[key] = fn(...args);
         }
         return cache[key];
