@@ -1,4 +1,4 @@
-// fetchall fetches URLs in parallel and reoorts their times and sizes
+// fetchall fetches URLs in parallel and reports their times and sizes
 package main
 
 import (

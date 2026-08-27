@@ -24,7 +24,6 @@ func (s *Stack[E]) Pop() (e E, avail bool) {
 	e = s.a[len(s.a)-1]
 	s.a = s.a[:len(s.a)-1]
 	return e, true
-
 }
 
 func (s *Stack[E]) Push(e E) {
