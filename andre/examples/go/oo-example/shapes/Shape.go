@@ -3,8 +3,7 @@ package shapes
 
 import "fmt"
 
-// Shape An interface for a shape. Go convention prefers the interface uses
-// a name ending in 'er'
+// Shape An interface for a shape.
 // An embedded interface adds that interface's method
 // set to this interface's method set
 type Shape interface {

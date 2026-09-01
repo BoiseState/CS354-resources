@@ -5,6 +5,10 @@ struct Person {
     char name[10];
 };
 
+void inc_age2(struct Person *p);
+void inc_age3(struct Person *p);
+
+
 void increment_age(struct Person p) 
 {
     p.age = p.age + 1;
@@ -16,16 +20,14 @@ int main()
 
     increment_age(person);
 
-    printf("%d\n", person.age);
-
-    inc_age_pointer(&person);
+//    printf("%d\n", person.age);
+    inc_age2(&person);
 
     printf("%d\n", person.age);
     
-    inc_age_pointer_2(&person);
+    inc_age3(&person);
     
-    printf("%d\n", person.age);
-
+    //printf("%d\n", person.age);
     return 0;
 }
 
@@ -34,14 +36,12 @@ int main()
 
 
 
-//try this!
-void inc_age_pointer(struct Person *p)
+void inc_age2(struct Person *p)
 {
     (*p).age = (*p).age + 1;
 }
 
-//best!
-void inc_age_pointer_2(struct Person *p)
+void inc_age3(struct Person *p)
 {
     p->age = p->age + 1;
 }
