@@ -1,4 +1,4 @@
-// compile with -foptimize-sibling-calls
+// compile with -foptimize-sibling-calls or -O2
 
 int a() {
     return a();

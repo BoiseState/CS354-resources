@@ -4,7 +4,7 @@ import "fmt"
 
 func stack() (push func(int), pop func() int) {
 	ch := make(chan int)
-	data := []int{}
+	var data []int
 
 	go func() {
 		for v := range ch {
