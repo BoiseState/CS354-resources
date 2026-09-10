@@ -36,7 +36,8 @@ you were asked to perform as part of the project.
 If you used any sources outside of the lecture notes, class lab files,
 or text book you need to list them here. If you looked something up on
 stackoverflow.com and fail to cite it in this section it will be
-considered plagiarism and be dealt with accordingly. So be safe CITE!
+considered plagiarism and be dealt with accordingly. Be sure to include any 
+usage of Generative AI, and why you used it or what you got from it.  
 
 Finally, remove these instructions from your README.md after you are finished!
 

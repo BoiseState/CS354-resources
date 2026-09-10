@@ -10,17 +10,3 @@
 
 (load "super-duper.scm")
 
-
-(display (super-duper 123 1))
-(display (super-duper 123 2))
-
-(display (super-duper '() 1))
-(display (super-duper '() 2))
-
-(display (super-duper '(x) 1))
-(display (super-duper '(x) 2))
-
-(display (super-duper '(x y) 1))
-(display (super-duper '(x y) 2))
-
-(display (super-duper '((a b) y) 3))
