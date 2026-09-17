@@ -29,7 +29,7 @@ public abstract class Node {
             result.append("\n");
             indent++;
             for (int i = 0; i < indent; i++) {
-                result.append("──");
+                result.append("────");
             }
             try {
                 result.append(" " + field.getName());
