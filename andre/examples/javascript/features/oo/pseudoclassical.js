@@ -3,18 +3,18 @@
 const parent = {
     value: 2,
     method() {
-        return this.value + 1;
+        return this.value;
     },
 };
 
-console.log(parent.method()); // 3
+console.log(parent.method()); // 2
 // When calling parent.method in this case, 'this' refers to parent
 
 // child is an object that inherits from parent
 const child = {
     __proto__: parent,
 };
-console.log(child.method()); // 3
+console.log(child.method()); // 2
 // When child.method is called, 'this' refers to child.
 // So when child inherits the method of parent,
 // The property 'value' is sought on child. However, since child
@@ -25,7 +25,12 @@ child.value = 4; // assign the value 4 to the property 'value' on child.
 // This shadows the 'value' property on parent.
 // The child object now looks like:
 // { value: 4, __proto__: { value: 2, method: [Function] } }
-console.log(child.method()); // 5
+console.log(child.method()); // 4
+
+// when parent gets a new property, all children (even if already created) get it too
+parent.value2 = 'Hello!';
+
+console.log(child.value2); // Hello!
 
 // JavaScript was worried about using too unfamiliar of concepts for mainstream programmers at the time
 // Keywords and concepts that you are used to appear, but they do different things.

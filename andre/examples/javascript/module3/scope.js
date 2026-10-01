@@ -1,4 +1,4 @@
-
+// nested function version of static/dynamic scope program
 let a;
 
 const main = function () {

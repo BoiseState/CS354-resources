@@ -4,50 +4,32 @@ Rubric for Javascript project:
 
 Overall Comments:
 
--Submission
-
-	- part1/
-	- part2/
-	- part3/
-    - a README.md file that has been completed
+-Submission:
+	- completed igpay.js and any other javascript
+    - a README.md file that has been completed with reflection and performance analysis
 
 Documentation:
 	-README.md:
-        -Reflection for Part 0 AI assisted code review [5 points]
-
-        -Reflection for Part 1 AI code port [5 points]
-
-        -Reflection for Part 2 Functional Closure Refactor [5 points]
-
-        -Reflection for Part 3 AI Assisted DB [5 points]
-
+        -Reflection using Javascript to solve the task      [5 points]
+        -Performance Reflection included in Results Section [5 points]
 
 Visual Checks:
-	- part1 [10 points]
-	    - ES6+ class syntax is used
-	    - Store's map is a private variable. walk() is implemented in json-walker.js
-	    - ESlint shows no errors or warnings
+	-igpay.js uses Readline library [5 points]
 
-    - part2 [10 points]
-        - store and json-walker use functional closures
-        - no ES6 class syntax is used
-        - No global state is modified
-	    - ESlint shows no errors or warnings
-
-    - part3 [15 points]
-        - json-walker uses async/await to read from the filesystem
-        - store now uses sqlite package and a backing database
-        - json-walker is updated to use addToStore with callback functions
-	    - ESlint shows no errors or warnings
-
-	-Other comments: 
-
+	-Other comments:
 
 Automated Checks:
-	-run-tests.sh completes successfully in part1/: [5 points]
+	-ESLint passes without any errors or warnings               [15 points]
 
-	-run-tests.sh completes successfully in part2/: [5 points]
+	-igpay.js properly translates consonant sounds              [10 points]
 
-	-run-tests.sh completes successfully in part3/: [5 points]
+	-igpay.js properly translates vowel sounds including 'y'    [10 points]
+
+	-igpay.js properly ignores non-alphabet characters          [10 points]
+
+	-igpay.js properly preserves capitalization                 [10 points]
 
     -Other comments:
+
+Extra Credit: [5 points]
+    -Demonstrate a performance improvement and evidence of using the NodeJS profiler.

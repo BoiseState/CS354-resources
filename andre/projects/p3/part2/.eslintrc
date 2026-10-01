@@ -1,9 +1,0 @@
-{
-  "extends": "airbnb-base",
-
-  "rules": {
-    "no-console": "off",
-    "import/extensions": 0,
-    "func-names": ["error", "as-needed"]
-  }
-}
