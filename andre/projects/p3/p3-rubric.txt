@@ -10,8 +10,8 @@ Overall Comments:
 
 Documentation:
 	-README.md:
-        -Reflection using Javascript to solve the task      [5 points]
-        -Performance Reflection included in Results Section [5 points]
+        -Reflection about using Javascript to solve the task      [5 points]
+        -Performance Reflection included in Results Section       [5 points]
 
 Visual Checks:
 	-igpay.js uses Readline library                                                     [5 points]
