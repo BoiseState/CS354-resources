@@ -14,7 +14,9 @@ Documentation:
         -Performance Reflection included in Results Section [5 points]
 
 Visual Checks:
-	-igpay.js uses Readline library [5 points]
+	-igpay.js uses Readline library                                                     [5 points]
+
+	-no 3rd party packages or libraries are used (no new dependencies in package.json)  [5 points]
 
 	-Other comments:
 
@@ -27,7 +29,7 @@ Automated Checks:
 
 	-igpay.js properly ignores non-alphabet characters          [10 points]
 
-	-igpay.js properly preserves capitalization                 [10 points]
+	-igpay.js properly preserves capitalization                 [5 points]
 
     -Other comments:
 
