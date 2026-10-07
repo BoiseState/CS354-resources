@@ -7,7 +7,7 @@ const f1 = function (a) {
 
 let variable = 2;
 
-const f2 = f1(variable); // f2 is the name of a function that was returned from f1.
+let f2 = f1(variable); // f2 is the name of a function that was returned from f1.
 
 f2();
 

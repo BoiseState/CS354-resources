@@ -1,19 +1,9 @@
-const parent = {
+const valueBox = {
     value: 2,
-    method() {
-        return this.value + 1;
+    setValue(n) {
+        return this.value = n;
     },
     getValue() {
         return this.value;
     },
 };
-
-console.log(parent.method());
-
-
-const child = {
-    __proto__: parent,
-};
-
-// open in node.js and play with attributes of child and parent
-// can we modify child.value?

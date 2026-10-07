@@ -1,4 +1,4 @@
-const boxConstructor = function() {
+const valueBox = function() {
     let value = 2;
     const getValue = function() {
         return value;

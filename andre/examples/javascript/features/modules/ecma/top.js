@@ -1,4 +1,4 @@
-import {hello, MyObject, obj} from './module.js'
+import {hello, MyObject, obj} from './module.mjs'
 
 hello();
 

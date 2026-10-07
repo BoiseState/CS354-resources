@@ -3,7 +3,7 @@
 
 class Cat {
     public boolean equals(Cat c) {
-        return this == c; // won't work. For demo only
+        return this == c; // won't function. For demo only
     }
 }
 

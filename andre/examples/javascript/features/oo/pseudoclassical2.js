@@ -24,6 +24,9 @@ console.log(child.value2);
 
 
 // constructor version
+const Vehicle = function (color) {
+    this.color = color;
+}
 
 Vehicle.prototype.get_color = function () {
     return this.color;
