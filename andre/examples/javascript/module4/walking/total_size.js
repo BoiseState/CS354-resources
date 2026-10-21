@@ -1,33 +1,19 @@
-import { opendir, stat, access } from 'node:fs/promises';
-
-async function exists(path) {
-    try {
-        await access(path);
-        return true;
-    } catch {
-        return false;
-    }
-}
+import { opendir, stat } from 'node:fs/promises';
+import { join } from 'node:path';
 
 export default async function total_size(top) {
-    let total = 0;
+    const stats = await stat(top);
+    let total = stats.size;
 
-    if (! await exists(top)) {
+    if (stats.isFile()) {
         return total;
     } else {
-        const stats = await stat(top);
-        total += stats.size;
-        if (stats.isFile()) {
-            return total;
-        } else {
-            const dir = await opendir(top);
-            for await (const dirent of dir) {
-                const stats = await stat(dirent.name);
-                total += stats.size;
-            }
+        const dir = await opendir(top);
+        for await (const dirent of dir) {
+            total += await total_size(join(top, dirent.name));
         }
         return total;
     }
 }
 
-console.log(await total_size('./'));
+console.log(await total_size('../'));

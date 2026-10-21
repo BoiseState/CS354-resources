@@ -28,3 +28,4 @@
   (sqrt-iter 1.0 x))
 
 (display (sqrt 15))
+(newline)
