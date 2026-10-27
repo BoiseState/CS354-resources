@@ -1,6 +1,6 @@
 import { stat } from 'node:fs/promises';
 import total_size from "./total_size.js";
-import {print_dir, nameNSize, file_size, dir_size} from "./lib.js";
+import {print_dir, nameNSize, file_size, dir_size, fileObj, dirObj} from "./lib.js";
 import {dir_walk} from "./dir_walk.js";
 import {dir_walk_better} from "./dir_walk_better.js";
 
@@ -27,5 +27,10 @@ await dir_walk('../', async (dir) => {
 await dir_walk('../', nameNSize);
 
 // problem: we cannot get total size, or other aggregation of data, yet...
-console.log(`total size is ${await dir_walk_better('../', nameNSize, dir_size)}`);
+console.log(`total size is ${await dir_walk_better('../', file_size, dir_size)}`);
 
+console.log(
+    JSON.stringify(
+        await dir_walk_better('../', fileObj, dirObj)
+        , null, 2)
+);

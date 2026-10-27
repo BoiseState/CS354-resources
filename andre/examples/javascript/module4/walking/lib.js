@@ -27,7 +27,23 @@ export async function dir_size(dir, results) {
     return total;
 }
 
-export async function dir(name, structure) {
 
+export async function fileObj(file) {
+    const stats = await stat(file);
+    return {
+        [file]: stats.size
+    };
+}
+
+export async function dirObj(dir, subdirs) {
+
+    let newObj = {};
+    subdirs.forEach((elem)=> {
+        const elemKey = Object.keys(elem)[0]
+        newObj[elemKey] = elem[elemKey];
+    });
+    return {
+        [dir]: newObj
+    };
 }
 
