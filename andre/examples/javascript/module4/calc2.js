@@ -44,5 +44,9 @@ calc_actions['exp'] = function() {
     this.stack.push(this.stack.pop() ** this.stack.pop());
 };
 
-console.log(evaluate(calc_actions));
-//console.log(evaluate(tree_actions));
+calc_actions['sqrt'] = function() {
+    this.stack.push(Math.sqrt(this.stack.pop()));
+};
+
+//console.log(evaluate(calc_actions));
+console.log(evaluate(tree_actions));
