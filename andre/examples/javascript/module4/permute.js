@@ -1,20 +1,21 @@
+// a permutation lister. Credit Higher Order Perl, by MJD
 
 const permute = function (items, perms) {
 
     if (items.length === 0) {
-        return perms;
+        console.log(...perms);
     } else {
         let newItems = [];
         let newPerms = [];
         for (let i = 0; i < items.length; i++) {
-            newItems = items;
-            newPerms = perms;
+            newItems = [...items];
+            newPerms = [...perms];
 
-            newItems.unshift(newPerms, newItems.splice(i, 1));
+            newPerms.unshift( ...newItems.splice(i, 1));
 
             permute(newItems, newPerms);
         }
     }
 }
 
-console.log(permute(['red', 'yellow', 'blue','green'], []))
+permute(['red', 'yellow', 'blue','green'], []);

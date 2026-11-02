@@ -17,7 +17,7 @@ function listLengthAccumulator(L, acc) {
     }
 }
 
-// best
+// best, as it uses the same interface as the original listLength
 function listLengthTail(L) {
     const listLengthAccumulator = function (L, acc){
         if (L === null) {
