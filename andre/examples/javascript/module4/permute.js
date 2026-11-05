@@ -18,4 +18,6 @@ const permute = function (items, perms) {
     }
 }
 
-permute(['red', 'yellow', 'blue','green'], []);
+// permute(['red', 'yellow', 'blue','green'], []);
+
+permute(['red', 'yellow', 'blue','green', 'pink', 'orange', 'brown', 'black', 'purple', 'cyan', 'magenta'], []);

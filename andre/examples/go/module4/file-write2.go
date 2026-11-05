@@ -18,7 +18,7 @@ func main() {
 		fmt.Println("Write error:", err)
 		err := file.Close()
 		if err != nil {
-			return 
+			return
 		}
 		return
 	}

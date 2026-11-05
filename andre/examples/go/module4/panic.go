@@ -38,10 +38,10 @@ func g(i int) {
 }
 
 func main() {
-	//testDefer()
-	//testDeferStack()
+	// testDefer()
+	testDeferStack()
 
-	f()
-	fmt.Println("Returned normally from f.")
+	// f()
+	// fmt.Println("Returned normally from f.")
 
 }

@@ -14,8 +14,8 @@ public class FileWrite {
         try {
             fileWrite();
         } catch (IOException e) {
-            System.err.println("Error!");
-        } finally {
+            System.err.println("Error!" + e);
+        }finally {
             // cleanup?
         }
     }
