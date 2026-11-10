@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 typedef struct {
     int x;
     int y;
@@ -10,7 +9,6 @@ typedef struct {
     int x;
     int y;
 } B;
-
 
 int main() {
 
