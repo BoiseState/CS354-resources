@@ -20,7 +20,7 @@ func sumTail(items []int, acc int) int {
 		return acc
 	}
 	// items becomes items[1:], acc becomes acc + items[0]
-	return sumTail(items[1:], acc + items[0])
+	return sumTail(items[1:], acc+items[0])
 
 }
 
