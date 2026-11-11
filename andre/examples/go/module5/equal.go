@@ -22,5 +22,5 @@ func main() {
 
 	var myB B = B{}
 
-	test(myB);
+	test((A)(myB)) // try test((A)(myB))
 }

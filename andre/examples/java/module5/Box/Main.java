@@ -1,3 +1,16 @@
+// credit https://www.cs.rice.edu/~javaplt/nv4/pecs/
+class Fuel {}
+class Plant extends Fuel {}
+class Bamboo extends Plant {}
+
+class Box<T> {
+    public void accept(BoxVisitor<? super T> visitor) {}
+}
+
+class BoxVisitor<U>{
+    public void visit(Box<? extends U> host) {}
+}
+
 public class Main {
 
     public static void main(String[] args) {
@@ -12,7 +25,6 @@ public class Main {
         //covariance
 
         // fuelConsumer can use each box
-
         fuelConsumer.visit(fuelBox);
         fuelConsumer.visit(plantBox);
         fuelConsumer.visit(bambooBox);
@@ -32,21 +44,16 @@ public class Main {
         //contravariance
 
         // fuelBox can only be visited by fuelConsumer
-
         fuelBox.accept(fuelConsumer);
         // fuelBox.accept(herbivore); // illegal
         // fuelBox.accept(panda); // illegal
 
-
         // plantBox can be visited by fuelConsumer and herbivore
-
         plantBox.accept(fuelConsumer);
         plantBox.accept(herbivore);
         // plantBox.accept(panda); // illegal
 
-
         // bambooBox can be visited by fuelConsumer, herbivore and panda
-
         bambooBox.accept(fuelConsumer);
         bambooBox.accept(herbivore);
         bambooBox.accept(panda);

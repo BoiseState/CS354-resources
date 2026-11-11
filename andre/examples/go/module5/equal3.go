@@ -15,11 +15,11 @@ type B struct {
 // refer to equal3.c
 func main() {
 
-	myB := B{ x: 1, y: 2}
+	myB := B{x: 1, y: 2}
 
 	// castB is a pointer of type A that points to B.
 	// Can we use a type B like a type A?
 	var castB *A = (*A)(&myB)
 
-	fmt.Printf("castB.x = %d\n", castB.x);
+	fmt.Printf("castB.x = %d\n", castB.x)
 }
