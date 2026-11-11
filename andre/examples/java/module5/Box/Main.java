@@ -4,11 +4,11 @@ class Plant extends Fuel {}
 class Bamboo extends Plant {}
 
 class Box<T> {
-    public void accept(BoxVisitor<? super T> visitor) {}
+    public void consumedBy(BoxVisitor<? super T> visitor) {}
 }
 
 class BoxVisitor<U>{
-    public void visit(Box<? extends U> host) {}
+    public void consume(Box<? extends U> host) {}
 }
 
 public class Main {
@@ -24,38 +24,36 @@ public class Main {
 
         //covariance
 
-        // fuelConsumer can use each box
-        fuelConsumer.visit(fuelBox);
-        fuelConsumer.visit(plantBox);
-        fuelConsumer.visit(bambooBox);
+        // fuelConsumer can consume each box
+        fuelConsumer.consume(fuelBox);
+        fuelConsumer.consume(plantBox);
+        fuelConsumer.consume(bambooBox);
 
-        // herbivore can use Plant and Bamboo boxes
+        // herbivore can consume Plant and Bamboo boxes
+        // herbivore.consume(fuelBox); // illegal
+        herbivore.consume(plantBox);
+        herbivore.consume(bambooBox);
 
-        // herbivore.visit(fuelBox); // illegal
-        herbivore.visit(plantBox);
-        herbivore.visit(bambooBox);
-
-        // panda can use Bamboo box
-
-        // panda.visit(fuelBox); // illegal
-        // panda.visit(plantBox); // illegal
-        panda.visit(bambooBox);
+        // panda can consume Bamboo box
+        // panda.consume(fuelBox); // illegal
+        // panda.consume(plantBox); // illegal
+        panda.consume(bambooBox);
 
         //contravariance
 
-        // fuelBox can only be visited by fuelConsumer
-        fuelBox.accept(fuelConsumer);
-        // fuelBox.accept(herbivore); // illegal
-        // fuelBox.accept(panda); // illegal
+        // fuelBox can only be consumedBy fuelConsumer
+        fuelBox.consumedBy(fuelConsumer);
+        // fuelBox.consumedBy(herbivore); // illegal
+        // fuelBox.consumedBy(panda); // illegal
 
-        // plantBox can be visited by fuelConsumer and herbivore
-        plantBox.accept(fuelConsumer);
-        plantBox.accept(herbivore);
-        // plantBox.accept(panda); // illegal
+        // plantBox can be consumedBy fuelConsumer and herbivore
+        plantBox.consumedBy(fuelConsumer);
+        plantBox.consumedBy(herbivore);
+        // plantBox.consumedBy(panda); // illegal
 
-        // bambooBox can be visited by fuelConsumer, herbivore and panda
-        bambooBox.accept(fuelConsumer);
-        bambooBox.accept(herbivore);
-        bambooBox.accept(panda);
+        // bambooBox can be consumedBy fuelConsumer, herbivore and panda
+        bambooBox.consumedBy(fuelConsumer);
+        bambooBox.consumedBy(herbivore);
+        bambooBox.consumedBy(panda);
     }
 }
