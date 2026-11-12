@@ -16,8 +16,8 @@ public class SumType {
     }
 
     public static void main(String ...args) {
-        Circle c = new Circle(2);
-        Rectangle r = new Rectangle(2, 4);
+        Shape c = new Circle(2);
+        Shape r = new Rectangle(2, 4);
         System.out.println(area(c));
         System.out.println(area(r));
     }

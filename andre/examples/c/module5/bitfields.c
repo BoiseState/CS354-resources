@@ -14,10 +14,11 @@ typedef union {
 
 int main(void) {
     IEEE754 value;
-    value.d=3.14159;			//set the double field to a double
+    value.d = 3.14159;			//set the double field to a double
     value.bits.exponent++;		//access the exponent field of it.
-    value.bits.sign^=1;			//access the sign field of it
-    printf("value.d: %g\n",value.d);
+    value.bits.sign ^= 1;		//access the sign field of it
+    
+    printf("value.d: %g\n", value.d);
 
 
     printf("value.bits.sign: %d, value.bits.exponent: %d, value.bits.fraction: %ld\n",
