@@ -1,27 +1,17 @@
-let obj = {
 
-    a: 123
-};
 
-let f = function(x) {
-    x.a = 456;
-    x = {}; //can change it to a different object, but it doesn't replace the actual.
-};
-
-console.log(obj.a); //123
-
-f(obj);
-
-console.log(obj.a) //456
-
-let prim = 1;
-
-f = function(x) {
-    x = 2;
+function f(x, y, z) {
+    x = x + 1;
+    y = z;
+    z = z + 1;
 }
 
-console.log(prim); //1
+let i = 1;
+let a = [];
+a[1] = 10;
+a[2] = 11;
 
-f(prim);
-
-console.log(prim); //1
+f(i, a[i], i);
+console.log(`i is ${i}`);
+console.log(`a[1] is ${a[1]}`);
+console.log(`a[2] is ${a[2]}`);
