@@ -41,7 +41,7 @@ TYPE stack_pop(Stack *stack) {
     return stack->data[--stack->top];
 }
 
-TYPE stack_peek(Stack *stack) {
+TYPEstack_peek(Stack *stack) {
     if (stack->top == 0)
         return NULL;
 
